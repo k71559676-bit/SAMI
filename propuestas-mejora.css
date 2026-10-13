@@ -1,0 +1,2095 @@
+/* ==========================================================
+   SAMILU — PROPUESTAS DE MEJORA
+   Diseño: moderno · natural · juvenil · profesional
+   ========================================================== */
+
+
+/* ==========================================================
+   VARIABLES
+   ========================================================== */
+
+:root{
+    --gold:#FAB902;
+    --brown:#722E01;
+    --green-dark:#19681E;
+    --green-light:#70B123;
+    --cream:#FDF6D3;
+
+    --cream-soft:#FFFDF1;
+    --cream-light:#FFF9E5;
+    --brown-soft:#8A542D;
+    --green-soft:#E7F1C8;
+
+    --shadow-small:
+        0 10px 25px rgba(114,46,1,.08);
+
+    --shadow:
+        0 20px 45px rgba(114,46,1,.11);
+
+    --shadow-large:
+        0 30px 70px rgba(114,46,1,.15);
+}
+
+
+/* ==========================================================
+   RESET
+   ========================================================== */
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    overflow-x:hidden;
+
+    background:var(--cream);
+    color:var(--brown);
+
+    font-family:"Fredoka",sans-serif;
+}
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button{
+    font-family:inherit;
+}
+
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+.site-header{
+    width:100%;
+    height:98px;
+
+    position:relative;
+
+    padding:0 4vw;
+
+    background:var(--cream);
+
+    display:flex;
+    align-items:center;
+
+    z-index:1000;
+}
+
+.brand-area{
+    width:100%;
+    height:100%;
+
+    position:relative;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.brand-logo-wrap{
+    position:absolute;
+
+    left:40px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:120px;
+    height:75px;
+
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+}
+
+.brand-logo{
+    width:120px;
+    height:auto;
+
+    object-fit:contain;
+}
+
+.brand-copy{
+    width:100%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.brand-copy h1{
+    margin:0;
+
+    font-family:"Lilita One",sans-serif;
+
+    font-size:clamp(22px,2.2vw,32px);
+    font-weight:400;
+    line-height:1;
+
+    text-align:center;
+
+    color:var(--brown);
+}
+
+.brand-copy p{
+    display:none;
+}
+
+
+/* ==========================================================
+   NAVBAR
+   ========================================================== */
+
+.navbar{
+    width:100%;
+
+    margin:0;
+
+    padding:8px 18px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:stretch;
+
+    gap:3px;
+
+    background:#FBF5E8;
+
+    border:1px solid rgba(249,166,0,.25);
+
+    border-radius:0 0 22px 22px;
+
+    box-shadow:
+        0 15px 35px rgba(74,27,1,.10);
+
+    position:sticky;
+
+    top:0;
+
+    z-index:5000;
+}
+
+.nav-item{
+    position:relative;
+
+    display:flex;
+    align-items:stretch;
+
+    flex:1 1 auto;
+}
+
+.nav-link{
+    width:100%;
+
+    min-height:48px;
+
+    padding:8px 10px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    border-radius:15px;
+
+    font-family:"Lilita One",sans-serif;
+
+    font-size:14px;
+    font-weight:400;
+
+    line-height:1.02;
+
+    color:#4A1B01;
+
+    transition:
+        background .25s ease,
+        color .25s ease,
+        transform .25s ease;
+}
+
+.nav-link:hover{
+    background:rgba(232,165,26,.13);
+
+    color:#D77D0E;
+
+    transform:translateY(-2px);
+}
+
+
+/* MENÚ ACTIVO */
+
+.nav-item.active > .nav-link,
+.nav-item.active > .nav-link:hover{
+    background:#F9A600;
+    color:#FFFFFF;
+}
+
+
+/* ==========================================================
+   SUBMENÚ
+   ========================================================== */
+
+.dropdown-item{
+    position:relative;
+}
+
+.dropdown-menu{
+    position:absolute;
+
+    top:calc(100% + 5px);
+    left:0;
+
+    width:255px;
+    min-width:255px;
+
+    max-height:75vh;
+
+    overflow-y:auto;
+
+    padding:8px;
+
+    background:#FBF5E8;
+
+    border:1px solid rgba(249,166,0,.40);
+
+    border-radius:0 0 16px 16px;
+
+    box-shadow:
+        0 15px 30px rgba(74,27,1,.14);
+
+    opacity:0;
+    visibility:hidden;
+
+    pointer-events:none;
+
+    transform:translateY(-8px);
+
+    z-index:5000;
+
+    transition:
+        opacity .22s ease,
+        visibility .22s ease,
+        transform .22s ease;
+}
+
+.dropdown-item:hover .dropdown-menu{
+    opacity:1;
+    visibility:visible;
+
+    pointer-events:auto;
+
+    transform:translateY(0);
+}
+
+.dropdown-menu a{
+    display:block;
+
+    width:100%;
+
+    padding:10px 12px;
+
+    border-radius:10px;
+
+    font-family:"Fredoka",sans-serif !important;
+
+    font-size:14px;
+    font-weight:500;
+
+    line-height:1.28;
+
+    color:#4A1B01;
+
+    border-bottom:
+        1px solid rgba(249,187,40,.30);
+
+    transition:
+        background .20s ease,
+        color .20s ease,
+        transform .20s ease;
+}
+
+.dropdown-menu a:last-child{
+    border-bottom:none;
+}
+
+.dropdown-menu a:hover{
+    background:#F9A600;
+    color:#FFFFFF;
+
+    transform:translateX(3px);
+}
+
+
+/* Ocultar flechas */
+
+.nav-button span{
+    display:none !important;
+}
+
+
+/* ==========================================================
+   HERO
+   ========================================================== */
+
+.proposals-hero{
+    min-height:720px;
+
+    padding:90px 7vw;
+
+    display:grid;
+
+    grid-template-columns:55% 45%;
+
+    gap:50px;
+
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(250,185,2,.20),
+            transparent 24%
+        ),
+
+        radial-gradient(
+            circle at 10% 85%,
+            rgba(112,177,35,.16),
+            transparent 25%
+        ),
+
+        linear-gradient(
+            135deg,
+            #FDF6D3,
+            #FFF9E5
+        );
+}
+
+
+/* Decoración */
+
+.proposals-hero::before{
+    content:"";
+
+    position:absolute;
+
+    width:550px;
+    height:550px;
+
+    right:-250px;
+    top:-230px;
+
+    border:
+        1px dashed rgba(114,46,1,.17);
+
+    border-radius:50%;
+}
+
+.proposals-hero::after{
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+    height:280px;
+
+    left:-170px;
+    bottom:-150px;
+
+    border:
+        1px solid rgba(112,177,35,.20);
+
+    border-radius:50%;
+}
+
+
+.proposals-hero-copy{
+    position:relative;
+
+    z-index:2;
+
+    max-width:850px;
+}
+
+.section-kicker{
+    display:inline-block;
+
+    margin-bottom:18px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:.15em;
+
+    color:var(--green-dark);
+}
+
+.proposals-hero h2{
+    margin:0;
+
+    max-width:850px;
+
+    font-family:"Fredoka",sans-serif;
+
+    font-size:
+        clamp(55px,6vw,88px);
+
+    font-weight:600;
+
+    line-height:.95;
+}
+
+.proposals-hero h2 em{
+    display:block;
+
+    font-style:normal;
+
+    color:var(--gold);
+}
+
+.proposals-hero-copy > p{
+    max-width:760px;
+
+    margin:28px 0;
+
+    font-size:19px;
+
+    line-height:1.72;
+
+    font-weight:500;
+
+    color:var(--brown-soft);
+}
+
+.proposals-hero-button{
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:16px;
+
+    margin-top:10px;
+
+    padding:16px 25px;
+
+    border-radius:50px;
+
+    background:var(--gold);
+
+    color:var(--brown);
+
+    font-size:17px;
+
+    font-weight:600;
+
+    box-shadow:
+        0 15px 30px rgba(250,185,2,.22);
+
+    transition:.3s ease;
+}
+
+.proposals-hero-button:hover{
+    transform:translateY(-5px);
+
+    background:var(--green-light);
+
+    color:var(--brown);
+}
+
+
+/* ==========================================================
+   IMAGEN HERO
+   ========================================================== */
+
+.proposal-image-slot{
+    width:100%;
+
+    min-height:480px;
+
+    padding:18px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #E7F1C8,
+            #FDF6D3
+        );
+
+    border:
+        1px solid rgba(114,46,1,.10);
+
+    box-shadow:var(--shadow);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+.proposal-image-slot:hover{
+    transform:translateY(-7px);
+
+    box-shadow:var(--shadow-large);
+}
+
+.proposal-image-slot img{
+    width:100%;
+    height:100%;
+
+    min-height:440px;
+
+    object-fit:contain;
+
+    border-radius:25px;
+
+    position:relative;
+
+    z-index:2;
+}
+
+
+/* ==========================================================
+   PLACEHOLDER DE IMAGEN
+   ========================================================== */
+
+.proposal-placeholder{
+    position:absolute;
+
+    inset:18px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    border:
+        2px dashed rgba(114,46,1,.25);
+
+    border-radius:25px;
+
+    background:
+        rgba(253,246,211,.55);
+
+    z-index:1;
+}
+
+.proposal-placeholder span{
+    max-width:80%;
+
+    font-family:"Lilita One",sans-serif;
+
+    font-size:20px;
+
+    letter-spacing:.04em;
+
+    color:var(--brown);
+}
+
+.proposal-placeholder small{
+    margin-top:9px;
+
+    font-size:14px;
+
+    font-weight:500;
+
+    color:var(--brown-soft);
+}
+
+
+/* ==========================================================
+   RESUMEN GENERAL
+   ========================================================== */
+
+.improvement-overview{
+    padding:110px 7vw;
+
+    background:var(--cream-soft);
+}
+
+.overview-heading{
+    max-width:900px;
+
+    margin-bottom:55px;
+}
+
+.overview-heading > span{
+    display:inline-block;
+
+    margin-bottom:15px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:.14em;
+
+    color:var(--green-dark);
+}
+
+.overview-heading h2{
+    margin:0;
+
+    font-family:"Fredoka",sans-serif;
+
+    font-size:
+        clamp(50px,5.5vw,78px);
+
+    font-weight:600;
+
+    line-height:.95;
+}
+
+.overview-heading h2 em{
+    font-style:normal;
+
+    color:var(--gold);
+}
+
+.overview-heading p{
+    max-width:780px;
+
+    margin-top:22px;
+
+    font-size:19px;
+
+    line-height:1.72;
+
+    font-weight:500;
+
+    color:var(--brown-soft);
+}
+
+
+/* ==========================================================
+   TARJETAS RESUMEN
+   ========================================================== */
+
+.overview-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:16px;
+}
+
+.overview-card{
+    min-height:250px;
+
+    padding:28px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    border-radius:28px;
+
+    background:#FFFFFF;
+
+    box-shadow:var(--shadow-small);
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:.35s ease;
+}
+
+.overview-card::after{
+    content:"";
+
+    position:absolute;
+
+    width:100px;
+    height:100px;
+
+    right:-35px;
+    bottom:-35px;
+
+    border-radius:50%;
+
+    background:
+        rgba(250,185,2,.12);
+}
+
+.overview-card:hover{
+    transform:
+        translateY(-8px)
+        rotate(-1deg);
+
+    box-shadow:var(--shadow);
+}
+
+.overview-number{
+    font-family:"Lilita One",sans-serif;
+
+    font-size:22px;
+
+    color:var(--gold);
+}
+
+.overview-card h3{
+    margin:25px 0 8px;
+
+    font-size:25px;
+
+    font-weight:600;
+
+    color:var(--brown);
+}
+
+.overview-card p{
+    margin:0;
+
+    font-size:17px;
+
+    line-height:1.6;
+
+    font-weight:500;
+
+    color:var(--brown-soft);
+}
+
+
+/* ==========================================================
+   SECCIONES DE PROPUESTAS
+   ========================================================== */
+
+.proposal-section{
+    width:100%;
+
+    padding:115px 7vw;
+
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+    scroll-margin-top:115px;
+}
+
+
+/* Alternancia */
+
+.standardization-section{
+    background:#E7F1C8;
+}
+
+.advertising-section{
+    background:
+        linear-gradient(
+            135deg,
+            #FDF6D3,
+            #FFF9E5
+        );
+}
+
+.colors-section{
+    background:var(--cream-soft);
+}
+
+.social-section{
+    background:#E7F1C8;
+}
+
+
+/* ==========================================================
+   CONTENIDO DE PROPUESTA
+   ========================================================== */
+
+.proposal-content{
+    max-width:720px;
+}
+
+.proposal-number{
+    display:inline-block;
+
+    margin-bottom:16px;
+
+    padding:8px 13px;
+
+    border-radius:100px;
+
+    background:var(--brown);
+
+    color:var(--gold);
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:.12em;
+}
+
+.proposal-content h2{
+    margin:0;
+
+    font-family:"Fredoka",sans-serif;
+
+    font-size:
+        clamp(48px,5vw,76px);
+
+    font-weight:600;
+
+    line-height:.95;
+}
+
+.proposal-content h2 em{
+    display:block;
+
+    font-style:normal;
+
+    color:var(--gold);
+}
+
+.proposal-content > p{
+    max-width:680px;
+
+    margin:24px 0 35px;
+
+    font-size:19px;
+
+    line-height:1.72;
+
+    font-weight:500;
+
+    color:var(--brown-soft);
+}
+
+
+/* ==========================================================
+   PUNTOS DE PROPUESTA
+   ========================================================== */
+
+.proposal-points{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:13px;
+}
+
+.proposal-points article{
+    display:grid;
+
+    grid-template-columns:48px 1fr;
+
+    gap:16px;
+
+    padding:18px;
+
+    border-radius:20px;
+
+    background:#FFFFFF;
+
+    box-shadow:var(--shadow-small);
+
+    transition:.3s ease;
+}
+
+.proposal-points article:hover{
+    transform:translateX(8px);
+
+    box-shadow:var(--shadow);
+}
+
+.proposal-points article > strong{
+    width:43px;
+    height:43px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:13px;
+
+    background:var(--gold);
+
+    color:var(--brown);
+
+    font-family:"Lilita One",sans-serif;
+
+    font-size:16px;
+}
+
+.proposal-points h3{
+    margin:1px 0 6px;
+
+    font-size:21px;
+
+    font-weight:600;
+}
+
+.proposal-points p{
+    margin:0;
+
+    font-size:17px;
+
+    line-height:1.55;
+
+    font-weight:500;
+
+    color:var(--brown-soft);
+}
+
+
+/* ==========================================================
+   PRODUCTOS
+   ========================================================== */
+
+.product-improvements{
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:12px;
+
+    margin-top:28px;
+}
+
+.product-card{
+    min-height:210px;
+
+    padding:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    border-radius:22px;
+
+    background:#FFFFFF;
+
+    box-shadow:var(--shadow-small);
+
+    transition:.3s ease;
+}
+
+.product-card:hover{
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow);
+}
+
+.product-card > span{
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:.12em;
+
+    color:var(--green-dark);
+}
+
+.product-card h3{
+    margin:16px 0 7px;
+
+    font-size:21px;
+
+    font-weight:600;
+}
+
+.product-card p{
+    margin:0;
+
+    font-size:16px;
+
+    line-height:1.55;
+
+    font-weight:500;
+
+    color:var(--brown-soft);
+}
+
+
+/* ==========================================================
+   PUNTO DE VENTA
+   ========================================================== */
+
+.point-of-sale{
+    margin-top:18px;
+
+    padding:23px;
+
+    border-left:
+        5px solid var(--gold);
+
+    border-radius:
+        0 20px 20px 0;
+
+    background:#EFF2D7;
+}
+
+.point-of-sale strong{
+    display:block;
+
+    margin-bottom:8px;
+
+    font-size:20px;
+
+    font-weight:600;
+}
+
+.point-of-sale p{
+    margin:0;
+
+    font-size:17px;
+
+    line-height:1.6;
+
+    font-weight:500;
+
+    color:var(--brown-soft);
+}
+
+
+/* ==========================================================
+   REGLAS VISUALES
+   ========================================================== */
+
+.visual-rules{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:13px;
+
+    margin-top:25px;
+}
+
+.visual-rules article{
+    display:grid;
+
+    grid-template-columns:55px 1fr;
+
+    gap:17px;
+
+    padding:19px;
+
+    border-radius:22px;
+
+    background:#FFFFFF;
+
+    box-shadow:var(--shadow-small);
+
+    transition:.3s ease;
+}
+
+.visual-rules article:hover{
+    transform:translateX(7px);
+
+    box-shadow:var(--shadow);
+}
+
+.rule-icon{
+    width:48px;
+    height:48px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:15px;
+
+    background:var(--brown);
+
+    color:var(--gold);
+
+    font-family:"Lilita One",sans-serif;
+
+    font-size:19px;
+}
+
+.visual-rules h3{
+    margin:0 0 6px;
+
+    font-size:21px;
+
+    font-weight:600;
+}
+
+.visual-rules p{
+    margin:0;
+
+    font-size:17px;
+
+    line-height:1.55;
+
+    font-weight:500;
+
+    color:var(--brown-soft);
+}
+
+
+/* ==========================================================
+   REDES SOCIALES
+   ========================================================== */
+
+.social-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:12px;
+
+    margin-top:25px;
+}
+
+
+/* ==========================================================
+   TARJETA DE RED SOCIAL — CLICKEABLE
+   ========================================================== */
+
+.social-card{
+    min-height:250px;
+
+    width:100%;
+
+    padding:22px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    text-align:left;
+
+    border:0;
+
+    border-radius:24px;
+
+    background:#FFFFFF;
+
+    box-shadow:var(--shadow-small);
+
+    color:var(--brown);
+
+    cursor:pointer;
+
+    appearance:none;
+
+    -webkit-appearance:none;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        outline .25s ease,
+        background .25s ease;
+}
+
+.social-card:hover{
+    transform:
+        translateY(-7px)
+        rotate(1deg);
+
+    box-shadow:var(--shadow);
+}
+
+
+/* TARJETA ACTIVA */
+
+.social-card.active{
+    outline:
+        3px solid rgba(250,185,2,.60);
+
+    outline-offset:0;
+
+    transform:translateY(-5px);
+
+    box-shadow:var(--shadow);
+}
+
+.social-card.active:hover{
+    transform:
+        translateY(-8px)
+        rotate(1deg);
+}
+
+
+/* ETIQUETA DE RED */
+
+.social-card > span{
+    display:inline-block;
+
+    align-self:flex-start;
+
+    padding:7px 10px;
+
+    border-radius:100px;
+
+    background:var(--gold);
+
+    color:var(--brown);
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:.1em;
+
+    transition:
+        background .25s ease,
+        color .25s ease;
+}
+
+
+/* ETIQUETA DE TARJETA ACTIVA */
+
+.social-card.active > span{
+    background:var(--brown);
+
+    color:var(--gold);
+}
+
+
+/* TÍTULO */
+
+.social-card h3{
+    margin:20px 0 8px;
+
+    font-size:21px;
+
+    font-weight:600;
+
+    color:var(--brown);
+}
+
+
+/* TEXTO */
+
+.social-card p{
+    margin:0;
+
+    font-size:16px;
+
+    line-height:1.6;
+
+    font-weight:500;
+
+    color:var(--brown-soft);
+}
+
+
+/* ==========================================================
+   VISOR ÚNICO DE IMAGEN — REDES SOCIALES
+   ========================================================== */
+
+/*
+   Este es UN SOLO cuadro.
+
+   Facebook, Instagram y TikTok cambian la imagen
+   dentro de este mismo espacio.
+*/
+
+.social-image-viewer{
+    position:relative;
+
+    width:100%;
+
+    min-height:480px;
+
+    padding:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:hidden;
+}
+
+
+/* Imagen que se muestra */
+
+.social-image-viewer img{
+    width:100%;
+    height:100%;
+
+    min-height:440px;
+
+    object-fit:contain;
+
+    border-radius:25px;
+
+    position:relative;
+
+    z-index:2;
+
+    opacity:1;
+
+    transform:scale(1);
+
+    transition:
+        opacity .28s ease,
+        transform .28s ease;
+}
+
+
+/* Durante el cambio */
+
+.social-image-viewer img.image-changing{
+    opacity:0;
+
+    transform:scale(.97);
+}
+
+
+/* Placeholder del visor */
+
+.social-image-viewer .proposal-placeholder{
+    position:absolute;
+
+    inset:18px;
+
+    z-index:1;
+}
+
+
+/* ==========================================================
+   CIERRE
+   ========================================================== */
+
+.proposals-closing{
+    width:100%;
+
+    padding:115px 7vw;
+
+    text-align:center;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--brown),
+            #8B4005
+        );
+
+    color:#FFFFFF;
+}
+
+.proposals-closing > span{
+    display:inline-block;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:.18em;
+
+    color:var(--gold);
+}
+
+.proposals-closing h2{
+    max-width:1000px;
+
+    margin:20px auto;
+
+    font-family:"Fredoka",sans-serif;
+
+    font-size:
+        clamp(48px,5.7vw,82px);
+
+    font-weight:600;
+
+    line-height:.95;
+}
+
+.proposals-closing h2 em{
+    display:block;
+
+    font-style:normal;
+
+    color:var(--gold);
+}
+
+.proposals-closing p{
+    max-width:820px;
+
+    margin:0 auto;
+
+    font-size:19px;
+
+    line-height:1.7;
+
+    font-weight:500;
+
+    color:#FFF6E5;
+}
+
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+
+.site-footer{
+    width:100%;
+
+    padding:50px 7vw;
+
+    display:grid;
+
+    grid-template-columns:
+        150px 1fr auto;
+
+    gap:30px;
+
+    align-items:center;
+
+    background:var(--brown);
+
+    color:#FFFFFF;
+}
+
+.footer-logo img{
+    width:120px;
+}
+
+.footer-info h3{
+    margin:0 0 6px;
+
+    font-family:"Lilita One",sans-serif;
+
+    font-size:30px;
+
+    font-weight:400;
+
+    color:var(--gold);
+}
+
+.footer-info p{
+    margin:0 0 5px;
+
+    font-size:17px;
+
+    font-weight:500;
+}
+
+.footer-info span{
+    font-size:15px;
+
+    opacity:.80;
+}
+
+.footer-quote{
+    max-width:300px;
+
+    font-family:"Fredoka",sans-serif;
+
+    font-size:23px;
+
+    font-weight:600;
+
+    line-height:1.05;
+
+    color:#D8E7A8;
+}
+
+
+/* ==========================================================
+   REVEAL
+   ========================================================== */
+
+.proposals-hero,
+.improvement-overview,
+.proposal-section,
+.proposals-closing{
+    opacity:0;
+
+    transform:translateY(30px);
+
+    transition:
+        opacity .75s ease,
+        transform .75s ease;
+}
+
+.proposals-hero.visible,
+.improvement-overview.visible,
+.proposal-section.visible,
+.proposals-closing.visible{
+    opacity:1;
+
+    transform:translateY(0);
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width:1100px){
+
+    .navbar{
+        overflow-x:auto;
+
+        justify-content:flex-start;
+    }
+
+
+    .proposals-hero{
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+        padding-top:80px;
+    }
+
+    .proposals-hero-copy{
+        margin:0 auto;
+    }
+
+    .proposals-hero-copy > p{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+
+    .proposal-section{
+        grid-template-columns:1fr;
+
+        gap:45px;
+    }
+
+    .proposal-content{
+        max-width:900px;
+
+        margin:0 auto;
+    }
+
+
+    .overview-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+
+    .product-improvements{
+        max-width:850px;
+
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+
+    .social-grid{
+        max-width:850px;
+
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+
+    .proposal-image-slot{
+        min-height:450px;
+    }
+
+    .proposal-image-slot img{
+        min-height:410px;
+    }
+
+
+    /* VISOR SOCIAL EN TABLET */
+
+    .social-image-viewer{
+        min-height:450px;
+    }
+
+    .social-image-viewer img{
+        min-height:410px;
+    }
+
+
+    .site-footer{
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+        justify-items:center;
+    }
+
+}
+
+
+/* ==========================================================
+   MÓVIL
+   ========================================================== */
+
+@media (max-width:700px){
+
+    /* HEADER */
+
+    .site-header{
+        height:90px;
+    }
+
+    .brand-logo-wrap{
+        left:18px;
+
+        width:90px;
+        height:65px;
+    }
+
+    .brand-logo{
+        width:90px;
+    }
+
+    .brand-copy h1{
+        max-width:230px;
+
+        font-size:17px;
+    }
+
+
+    /* NAVBAR */
+
+    .navbar{
+        width:100%;
+
+        margin:0;
+
+        padding:5px;
+
+        border-radius:0;
+    }
+
+    .nav-link{
+        min-height:47px;
+
+        padding:8px;
+
+        font-size:12px;
+    }
+
+    .dropdown-menu{
+        width:220px;
+
+        min-width:220px;
+    }
+
+
+    /* HERO */
+
+    .proposals-hero{
+        min-height:auto;
+
+        padding:
+            70px 6vw 75px;
+    }
+
+    .proposals-hero h2{
+        font-size:44px;
+    }
+
+    .proposals-hero-copy > p{
+        font-size:17px;
+    }
+
+    .proposals-hero-button{
+        width:100%;
+    }
+
+
+    /* IMÁGENES */
+
+    .proposal-image-slot{
+        min-height:350px;
+
+        padding:12px;
+
+        border-radius:26px;
+    }
+
+    .proposal-image-slot img{
+        min-height:325px;
+
+        border-radius:20px;
+    }
+
+    .proposal-placeholder{
+        inset:12px;
+
+        border-radius:20px;
+    }
+
+    .proposal-placeholder span{
+        font-size:16px;
+    }
+
+
+    /* VISOR SOCIAL */
+
+    .social-image-viewer{
+        min-height:350px;
+
+        padding:12px;
+
+        border-radius:26px;
+    }
+
+    .social-image-viewer img{
+        min-height:325px;
+
+        border-radius:20px;
+    }
+
+    .social-image-viewer .proposal-placeholder{
+        inset:12px;
+
+        border-radius:20px;
+    }
+
+
+    /* OVERVIEW */
+
+    .improvement-overview{
+        padding:80px 6vw;
+    }
+
+    .overview-heading h2{
+        font-size:43px;
+    }
+
+    .overview-heading p{
+        font-size:17px;
+    }
+
+    .overview-grid{
+        grid-template-columns:1fr;
+    }
+
+    .overview-card{
+        min-height:210px;
+    }
+
+
+    /* PROPUESTAS */
+
+    .proposal-section{
+        padding:80px 6vw;
+
+        gap:35px;
+
+        scroll-margin-top:100px;
+    }
+
+    .proposal-content h2{
+        font-size:43px;
+    }
+
+    .proposal-content > p{
+        font-size:17px;
+    }
+
+
+    /* PUNTOS */
+
+    .proposal-points p{
+        font-size:17px;
+    }
+
+
+    /* PRODUCTOS */
+
+    .product-improvements{
+        grid-template-columns:1fr;
+    }
+
+    .product-card{
+        min-height:190px;
+    }
+
+
+    /* PUNTO DE VENTA */
+
+    .point-of-sale p{
+        font-size:17px;
+    }
+
+
+    /* REGLAS VISUALES */
+
+    .visual-rules p{
+        font-size:17px;
+    }
+
+
+    /* REDES */
+
+    .social-grid{
+        grid-template-columns:1fr;
+    }
+
+    .social-card{
+        min-height:210px;
+    }
+
+    .social-card p{
+        font-size:17px;
+    }
+
+
+    /* CIERRE */
+
+    .proposals-closing{
+        padding:80px 6vw;
+    }
+
+    .proposals-closing h2{
+        font-size:43px;
+    }
+
+    .proposals-closing p{
+        font-size:17px;
+    }
+
+
+    /* FOOTER */
+
+    .site-footer{
+        padding:45px 6vw;
+    }
+
+    .footer-logo img{
+        width:100px;
+    }
+
+    .footer-info h3{
+        font-size:27px;
+    }
+
+    .footer-quote{
+        font-size:20px;
+    }
+
+}
+
+
+/* ==========================================================
+   PANTALLAS MUY PEQUEÑAS
+   ========================================================== */
+
+@media (max-width:450px){
+
+    .brand-logo-wrap{
+        left:12px;
+    }
+
+    .brand-logo{
+        width:82px;
+    }
+
+    .brand-copy h1{
+        max-width:190px;
+
+        font-size:15px;
+    }
+
+    .nav-link{
+        min-height:44px;
+
+        padding:6px;
+
+        font-size:11px;
+    }
+
+    .dropdown-menu{
+        width:205px;
+
+        min-width:205px;
+    }
+
+    .proposals-hero h2{
+        font-size:39px;
+    }
+
+    .overview-heading h2{
+        font-size:38px;
+    }
+
+    .proposal-content h2{
+        font-size:38px;
+    }
+
+    .proposals-closing h2{
+        font-size:38px;
+    }
+
+    .proposal-image-slot{
+        min-height:280px;
+    }
+
+    .proposal-image-slot img{
+        min-height:255px;
+    }
+
+    .proposal-placeholder span{
+        font-size:14px;
+    }
+
+
+    /* VISOR SOCIAL EN PANTALLAS MUY PEQUEÑAS */
+
+    .social-image-viewer{
+        min-height:280px;
+    }
+
+    .social-image-viewer img{
+        min-height:255px;
+    }
+
+    .social-image-viewer .proposal-placeholder{
+        inset:12px;
+    }
+}
+/* ==========================================================
+   SAMILU — VISOR DE IMÁGENES AMPLIADAS (LIGHTBOX)
+   Añadir al FINAL del CSS existente de propuestas-mejora.
+   ========================================================== */
+
+/* Indica que las imágenes de las propuestas se pueden ampliar */
+.proposal-image-slot img {
+    cursor: zoom-in;
+}
+
+/* Fondo que cubre la pantalla completa */
+.samilu-image-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(12px, 3vw, 40px);
+    box-sizing: border-box;
+    background: rgba(22, 14, 7, 0.92);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+    cursor: zoom-out;
+}
+
+.samilu-image-lightbox.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* La imagen conserva sus proporciones y se ve completa */
+.samilu-image-lightbox__image {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 96vw;
+    max-height: 92vh;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 12px;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+    cursor: default;
+    animation: samiluLightboxEnter 0.28s ease both;
+}
+
+.samilu-image-lightbox__close {
+    position: absolute;
+    top: max(16px, env(safe-area-inset-top));
+    right: max(16px, env(safe-area-inset-right));
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 50%;
+    background: #FAB902;
+    color: #4A1B01;
+    font: 700 31px/1 Arial, sans-serif;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.samilu-image-lightbox__close:hover {
+    transform: rotate(90deg) scale(1.06);
+    background: #FFFFFF;
+}
+
+@keyframes samiluLightboxEnter {
+    from { opacity: 0; transform: scale(0.96); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 640px) {
+    .samilu-image-lightbox {
+        padding: 12px;
+    }
+
+    .samilu-image-lightbox__image {
+        max-width: 96vw;
+        max-height: 86vh;
+        border-radius: 8px;
+    }
+
+    .samilu-image-lightbox__close {
+        width: 43px;
+        height: 43px;
+        font-size: 28px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .samilu-image-lightbox,
+    .samilu-image-lightbox__close {
+        transition: none;
+    }
+
+    .samilu-image-lightbox__image {
+        animation: none;
+    }
+}
