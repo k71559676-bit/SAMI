@@ -1,0 +1,1943 @@
+/* =====================================================
+   SAMILU — CSS FINAL CONSOLIDADO
+   Mantiene el diseño actual y corrige únicamente:
+   - Tipografía del menú y submenús
+   - Flechas ocultas
+   - Sintaxis CSS dañada
+   - Tarjetas de doble cara
+   - Imagen trasera a tamaño completo
+   - Ventana de imagen ampliada
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Lilita+One&display=swap');
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    font-family: "Fredoka", sans-serif;
+    background: #ffffff;
+    color: #4A1B01;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+button,
+a {
+    font-family: inherit;
+}
+
+
+/* =====================================================
+   ENCABEZADO
+===================================================== */
+
+.header {
+    width: 100%;
+    height: 96px;
+    background: #FBECCF;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-logo {
+    position: absolute;
+    left: 82px;
+    top: 12px;
+    width: 115px;
+    height: 67px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-logo img {
+    width: 115px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.header-title {
+    font-family: "Lilita One", sans-serif;
+    font-size: 23px;
+    color: #4A1B01;
+    line-height: 1;
+    white-space: nowrap;
+    text-align: center;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    width: calc(100% - 70px);
+    min-height: 76px;
+    margin: 0 auto;
+    padding: 8px 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    box-sizing: border-box;
+
+    background: #FBF5E8;
+
+    border: 1px solid rgba(166, 91, 23, .18);
+
+    border-radius: 0 0 24px 24px;
+
+    box-shadow:
+        0 8px 22px rgba(74, 27, 1, .08);
+
+    position: relative;
+    z-index: 1000;
+}
+
+.navbar::before {
+    content: "";
+
+    position: absolute;
+
+    left: 25px;
+    top: 0;
+
+    width: 90px;
+    height: 3px;
+
+    background: #F9A600;
+
+    border-radius: 0 0 8px 8px;
+}
+
+.nav-item {
+    position: relative;
+
+    flex: 1 1 0;
+    min-width: 0;
+
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 3px;
+
+    border: none;
+
+    transition:
+        transform .25s ease;
+}
+
+.nav-item:first-child,
+.nav-item:last-child {
+    border-left: none;
+    border-right: none;
+}
+
+
+/* =====================================================
+   MENÚ PRINCIPAL
+===================================================== */
+
+.nav-item > a,
+.nav-link,
+.nav-button {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    padding: 8px 12px;
+
+    border-radius: 16px;
+
+    color: #4A1B01;
+
+    text-decoration: none;
+
+    font-family:
+        "Lilita One",
+        sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 400;
+
+    line-height: 1.05;
+
+    text-align: center;
+
+    transition:
+        background .25s ease,
+        color .25s ease,
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.nav-button {
+    gap: 0;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   SIN FLECHAS
+===================================================== */
+
+.nav-button span {
+    display: none !important;
+}
+
+
+/* =====================================================
+   HOVER DEL MENÚ
+===================================================== */
+
+.nav-item:hover > a,
+.nav-item:hover > .nav-button {
+    background: rgba(249, 166, 0, .12);
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   MENÚ ACTIVO
+===================================================== */
+
+.nav-item.active > a,
+.nav-item.active > .nav-button {
+    background: #F9A600;
+
+    color: #4A1B01;
+
+    box-shadow:
+        0 6px 15px
+        rgba(249, 166, 0, .25);
+
+    transform: translateY(-2px);
+}
+
+.nav-item.active:hover > a,
+.nav-item.active:hover > .nav-button {
+    background: #F9A600;
+
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   SUBMENÚ
+===================================================== */
+
+.dropdown-menu {
+    position: absolute;
+
+    top: calc(100% + 5px);
+
+    left: 50%;
+
+    width: 255px;
+    min-width: 255px;
+
+    box-sizing: border-box;
+
+    background: #FBF5E8;
+
+    border:
+        1px solid
+        rgba(249, 166, 0, .40);
+
+    border-radius:
+        0 0 16px 16px;
+
+    box-shadow:
+        0 15px 30px
+        rgba(74, 27, 1, .14);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transform:
+        translate(-50%, -8px);
+
+    overflow: visible;
+
+    z-index: 5000;
+
+    transition:
+        opacity .22s ease,
+        visibility .22s ease,
+        transform .22s ease;
+}
+
+.dropdown-item:hover .dropdown-menu,
+.dropdown-item.open .dropdown-menu {
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform:
+        translate(-50%, 0);
+}
+
+
+/* =====================================================
+   SUBTEMAS — FREDOKA
+===================================================== */
+
+.dropdown-menu a {
+    display: block;
+
+    width: 100%;
+
+    min-height: 42px;
+
+    box-sizing: border-box;
+
+    padding: 11px 16px;
+
+    background: #FBF5E8;
+
+    color: #4A1B01;
+
+    text-decoration: none;
+
+    font-family:
+        "Fredoka",
+        sans-serif !important;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    font-style: normal;
+
+    line-height: 1.35;
+
+    letter-spacing: 0;
+
+    text-align: left;
+
+    white-space: normal;
+
+    overflow: visible;
+
+    overflow-wrap: break-word;
+
+    border-bottom:
+        1px solid
+        rgba(249, 187, 40, .30);
+
+    transition:
+        background .2s ease,
+        padding-left .2s ease,
+        color .2s ease;
+}
+
+.dropdown-menu a:last-child {
+    border-bottom: none;
+
+    border-radius:
+        0 0 15px 15px;
+}
+
+.dropdown-menu a:hover {
+    background: #F9A600;
+
+    color: #4A1B01;
+
+    padding-left: 21px;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    width: 100%;
+
+    height: 520px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #FBECCF;
+}
+
+.hero-image {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center center;
+
+    display: block;
+
+    z-index: 1;
+
+    transition:
+        transform .5s ease;
+}
+
+.hero-content {
+    position: absolute;
+
+    z-index: 5;
+
+    left: 96px;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    width: 550px;
+}
+
+
+/* =====================================================
+   LUZ / DESENFOQUE DEL HERO
+===================================================== */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    left: 35px;
+
+    top: 25px;
+
+    width: 560px;
+
+    height: 430px;
+
+    z-index: 3;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+
+            rgba(251, 236, 207, 1)
+                0%,
+
+            rgba(251, 236, 207, .95)
+                32%,
+
+            rgba(251, 236, 207, .75)
+                58%,
+
+            rgba(251, 236, 207, .35)
+                78%,
+
+            rgba(251, 236, 207, 0)
+                100%
+        );
+
+    filter: blur(30px);
+
+    transform:
+        scale(1.15);
+}
+
+
+/* =====================================================
+   TÍTULO PEQUEÑO DEL HERO
+===================================================== */
+
+.hero-small-title {
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    color: #4A1B01;
+
+    margin-bottom: 18px;
+}
+
+
+/* =====================================================
+   TÍTULO PRINCIPAL
+===================================================== */
+
+.hero-title {
+    position: relative;
+
+    font-family:
+        "Lilita One",
+        sans-serif;
+
+    line-height: .98;
+}
+
+.title-brown,
+.title-orange {
+    font-family:
+        "Lilita One",
+        sans-serif;
+
+    font-size: 52px;
+
+    line-height: .98;
+
+    white-space: nowrap;
+}
+
+.title-brown {
+    color: #4A1B01;
+}
+
+.title-orange {
+    color: #F9A000;
+
+    margin-top: 5px;
+}
+
+
+/* =====================================================
+   DECORACIONES
+===================================================== */
+
+.decoration {
+    position: absolute;
+
+    z-index: 6;
+
+    pointer-events: none;
+
+    object-fit: contain;
+}
+
+.decoration-left {
+    width: 39px;
+
+    height: 65px;
+
+    left: -48px;
+
+    top: 18px;
+}
+
+.decoration-right {
+    width: 39px;
+
+    height: 65px;
+
+    right: 5px;
+
+    top: -4px;
+}
+
+
+/* =====================================================
+   DESCRIPCIÓN DEL HERO
+===================================================== */
+
+.hero-description {
+    margin-top: 20px;
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size: 20px;
+
+    font-weight: 500;
+
+    line-height: 1.35;
+
+    color: #4A1B01;
+}
+
+
+/* =====================================================
+   BOTÓN DEL HERO
+===================================================== */
+
+.hero-button {
+    margin-top: 17px;
+
+    width: 286px;
+
+    height: 42px;
+
+    border:
+        1px solid
+        #F8A30A;
+
+    border-radius: 18.5px;
+
+    background: #FBB222;
+
+    color: #4A1B01;
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding:
+        0 17px 0 20px;
+
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        background .2s ease,
+        box-shadow .2s ease;
+}
+
+.hero-button .button-arrow {
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 25px;
+
+    line-height: 1;
+
+    transition:
+        transform .2s ease;
+}
+
+.hero-button:hover {
+    transform:
+        translateY(-2px);
+
+    background:
+        #F9A800;
+
+    box-shadow:
+        0 8px 18px
+        rgba(249, 166, 0, .25);
+}
+
+.hero-button:hover .button-arrow {
+    transform:
+        translateX(5px);
+}
+
+
+/* =====================================================
+   BLONDAS — DESACTIVADAS
+===================================================== */
+
+.blonda-superior,
+.blonda-inferior {
+    display: none !important;
+}
+
+
+/* =====================================================
+   BENEFICIOS — TARJETAS DE DOBLE CARA
+===================================================== */
+
+.benefits {
+    width: 100%;
+
+    min-height: 245px;
+
+    height: auto;
+
+    padding: 32px 34px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+    align-items: stretch;
+
+    background:
+        linear-gradient(
+            135deg,
+
+            #FBF5E8 0%,
+
+            #FFFFFF 48%,
+
+            #F4F7D8 100%
+        );
+
+    position: relative;
+
+    z-index: 20;
+
+    perspective: 1200px;
+}
+
+
+/* TARJETA */
+
+.benefit {
+    width: 100%;
+
+    height: 190px;
+
+    min-height: 190px;
+
+    position: relative;
+
+    padding: 0;
+
+    cursor: pointer;
+
+    background: transparent;
+
+    border: none;
+
+    outline: none;
+
+    perspective: 1200px;
+
+    overflow: visible;
+}
+
+
+/* CONTENEDOR QUE GIRA */
+
+.benefit-inner {
+    position: relative;
+
+    width: 100%;
+
+    height: 100%;
+
+    transform-style:
+        preserve-3d;
+
+    transition:
+        transform .65s
+        cubic-bezier(.2, .7, .2, 1);
+}
+
+
+/* =====================================================
+   AQUÍ OCURRE EL GIRO
+===================================================== */
+
+.benefit.flipped .benefit-inner {
+    transform:
+        rotateY(180deg);
+}
+
+
+/* AMBAS CARAS */
+
+.benefit-front,
+.benefit-back {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    backface-visibility:
+        hidden;
+
+    -webkit-backface-visibility:
+        hidden;
+}
+
+
+/* =====================================================
+   CARA DELANTERA
+===================================================== */
+
+.benefit-front {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 18px 16px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+
+            #FFFFFF 0%,
+
+            #FBF5E8 100%
+        );
+
+    border:
+        1px solid
+        rgba(249, 166, 0, .28);
+
+    box-shadow:
+        0 8px 20px
+        rgba(74, 27, 1, .07);
+}
+
+
+/* DECORACIÓN DE LA TARJETA */
+
+.benefit-front::before {
+    content: "";
+
+    position: absolute;
+
+    width: 110px;
+
+    height: 110px;
+
+    right: -42px;
+
+    top: -48px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(249, 166, 0, .12);
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   ICONOS — SE CONSERVAN
+===================================================== */
+
+.benefit-front img {
+    width: 68px;
+
+    height: 68px;
+
+    object-fit: contain;
+
+    margin-bottom: 8px;
+
+    position: relative;
+
+    z-index: 1;
+
+    transition:
+        transform .3s ease;
+}
+
+.benefit:hover .benefit-front img {
+    transform:
+        scale(1.08)
+        rotate(-3deg);
+}
+
+
+/* =====================================================
+   TÍTULO DE TARJETA
+===================================================== */
+
+.benefit-front h3 {
+    position: relative;
+
+    z-index: 1;
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    color: #4A1B01;
+
+    margin:
+        0 0 5px;
+}
+
+
+/* =====================================================
+   TEXTO DE TARJETA
+===================================================== */
+
+.benefit-front p {
+    position: relative;
+
+    z-index: 1;
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    line-height: 1.25;
+
+    color: #6A3A18;
+
+    margin: 0;
+}
+
+
+/* =====================================================
+   CARA TRASERA
+===================================================== */
+
+.benefit-back {
+    transform:
+        rotateY(180deg);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 0;
+
+    background:
+        linear-gradient(
+            145deg,
+
+            #DCE5A3 0%,
+
+            #FBF5E8 62%,
+
+            #F9BB28 150%
+        );
+
+    border:
+        1px solid
+        rgba(165, 174, 31, .40);
+
+    box-shadow:
+        0 12px 28px
+        rgba(74, 27, 1, .13);
+}
+
+
+/* =====================================================
+   IMAGEN — OCUPA TODA LA CARA TRASERA
+===================================================== */
+
+.benefit-image-placeholder {
+    width: 100%;
+
+    height: 100%;
+
+    margin: 0;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 24px;
+
+    background: transparent;
+
+    overflow: hidden;
+
+    display: block;
+}
+
+.benefit-image-placeholder img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform .45s ease;
+}
+
+
+/* PEQUEÑO ZOOM */
+
+.benefit-back:hover
+.benefit-image-placeholder img {
+    transform:
+        scale(1.06);
+}
+
+
+/* ACCESIBILIDAD */
+
+.benefit:focus-visible {
+    outline:
+        3px solid
+        rgba(249, 166, 0, .55);
+
+    outline-offset: 4px;
+}
+
+
+/* =====================================================
+   CONOCE SAMILU
+===================================================== */
+
+.conoce {
+    width: 100%;
+
+    min-height: 280px;
+
+    padding:
+        58px 30px 60px;
+
+    background:
+        radial-gradient(
+            circle at 15% 30%,
+            rgba(165, 174, 31, .16),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 85% 70%,
+            rgba(249, 166, 0, .16),
+            transparent 30%
+        ),
+
+        #FBECCF;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.conoce::before,
+.conoce::after {
+    content: "";
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.conoce::before {
+    width: 170px;
+
+    height: 170px;
+
+    left: -85px;
+
+    bottom: -90px;
+
+    background:
+        rgba(165, 174, 31, .12);
+}
+
+.conoce::after {
+    width: 130px;
+
+    height: 130px;
+
+    right: -55px;
+
+    top: -55px;
+
+    background:
+        rgba(249, 166, 0, .12);
+}
+
+.conoce h2 {
+    font-family:
+        "Lilita One",
+        sans-serif;
+
+    font-size: 38px;
+
+    line-height: 1;
+
+    color: #4A1B01;
+
+    margin-bottom: 14px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.conoce p {
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 500;
+
+    color: #6A3A18;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* =====================================================
+   ANIMACIONES / CARGA
+===================================================== */
+
+.benefit,
+.conoce,
+.hero-content {
+    will-change:
+        transform;
+}
+
+
+/* =====================================================
+   VENTANA DE IMAGEN AMPLIADA
+===================================================== */
+
+.image-preview-window {
+    position: fixed;
+
+    width: 430px;
+
+    height: 300px;
+
+    background: #FFFFFF;
+
+    border:
+        3px solid
+        #F9A600;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 18px 45px
+        rgba(74, 27, 1, .25);
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    z-index: 99999;
+
+    transform:
+        scale(.88);
+
+    transition:
+        opacity .22s ease,
+        transform .22s ease;
+}
+
+.image-preview-window.show {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        scale(1);
+}
+
+.image-preview-window img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =====================================================
+   RESPONSIVE 1100px
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .header-logo {
+        left: 35px;
+    }
+
+    .header-title {
+        font-size: 19px;
+    }
+
+    .nav-button,
+    .nav-link {
+        font-size: 13px;
+    }
+
+    .hero-content {
+        left: 70px;
+    }
+
+    .title-brown,
+    .title-orange {
+        font-size: 45px;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE 900px
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        width:
+            calc(100% - 24px);
+    }
+
+    .benefits {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        padding: 28px;
+    }
+
+    .hero {
+        height: 500px;
+    }
+
+    .hero-content {
+        left: 45px;
+
+        width: 500px;
+    }
+
+    .image-preview-window {
+        width: 360px;
+
+        height: 260px;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE 600px
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .header {
+        height: 82px;
+    }
+
+    .header-logo {
+        left: 20px;
+
+        width: 85px;
+    }
+
+    .header-logo img {
+        width: 85px;
+    }
+
+    .header-title {
+        font-size: 17px;
+
+        max-width: 65%;
+
+        white-space: normal;
+    }
+
+    .navbar {
+        width: 100%;
+
+        padding: 5px;
+
+        border-radius: 0;
+
+        overflow-x: auto;
+
+        justify-content:
+            flex-start;
+    }
+
+    .nav-item {
+        min-width: 125px;
+
+        flex: 0 0 125px;
+    }
+
+    .dropdown-menu {
+        left: 0;
+
+        transform:
+            translate(0, -8px);
+    }
+
+    .dropdown-item:hover
+    .dropdown-menu,
+    .dropdown-item.open
+    .dropdown-menu {
+        transform:
+            translate(0, 0);
+    }
+
+    .hero {
+        height: 520px;
+    }
+
+    .hero-content {
+        left: 25px;
+
+        top: 48%;
+
+        width:
+            calc(100% - 50px);
+    }
+
+    .title-brown,
+    .title-orange {
+        font-size: 39px;
+
+        white-space: normal;
+    }
+
+    .hero-small-title {
+        font-size: 18px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+
+        max-width: 390px;
+    }
+
+    .hero-button {
+        width: 260px;
+    }
+
+    .benefits {
+        grid-template-columns: 1fr;
+
+        padding: 22px;
+    }
+
+    .benefit {
+        height: 190px;
+
+        min-height: 190px;
+    }
+
+    .image-preview-window {
+        width: 300px;
+
+        height: 220px;
+    }
+}
+/* =====================================================
+   EFECTO MÁS NOTORIO AL PRESIONAR LAS TARJETAS
+===================================================== */
+
+/* Movimiento al pasar el cursor */
+.benefit {
+    transition:
+        transform .22s ease,
+        filter .22s ease;
+}
+
+.benefit:hover {
+    transform: translateY(-7px) scale(1.02);
+}
+
+
+/* Al presionar la tarjeta */
+.benefit:active {
+    transform: translateY(5px) scale(.94);
+    filter: brightness(.94);
+}
+
+
+/* Efecto cuando queda seleccionada */
+.benefit.flipped {
+    transform: translateY(-4px);
+}
+
+
+/* Mantener el giro suave */
+.benefit-inner {
+    transition:
+        transform .7s cubic-bezier(.18, .89, .32, 1.28);
+}
+/* =====================================================
+   PRODUCTOS SAMILU
+===================================================== */
+
+.productos {
+    width: 100%;
+    min-height: 500px;
+    padding: 70px 40px;
+    background: #FFFDF7;
+    text-align: center;
+}
+
+.productos h2 {
+    font-family: "Lilita One", sans-serif;
+    font-size: 40px;
+    color: #4A1B01;
+    margin-bottom: 15px;
+}
+
+.productos p {
+    font-family: "Fredoka", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #6A3A18;
+}
+/* =====================================================
+   NUESTROS PRODUCTOS
+===================================================== */
+
+.productos {
+    width: 100%;
+    min-height: 600px;
+
+    padding: 65px 45px 80px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #FFFDF7 0%,
+            #FBF5E8 100%
+        );
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* ENCABEZADO */
+
+.productos-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.productos-etiqueta {
+    display: inline-block;
+
+    padding: 7px 16px;
+
+    border-radius: 999px;
+
+    background: rgba(249, 166, 0, .14);
+
+    color: #8A4A0A;
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: .5px;
+
+    margin-bottom: 12px;
+}
+
+.productos-header h2 {
+    font-family:
+        "Lilita One",
+        sans-serif;
+
+    font-size: 42px;
+
+    line-height: 1;
+
+    color: #4A1B01;
+
+    margin-bottom: 14px;
+}
+
+.productos-header p {
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 500;
+
+    color: #6A3A18;
+}
+
+
+/* =====================================================
+   GRID
+===================================================== */
+
+.productos-grid {
+    width: 100%;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 28px;
+}
+
+
+/* =====================================================
+   TARJETA
+===================================================== */
+
+.producto-card {
+    background: #FFFFFF;
+
+    border-radius: 26px;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(249, 166, 0, .28);
+
+    box-shadow:
+        0 12px 28px
+        rgba(74, 27, 1, .08);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.producto-card:hover {
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 20px 38px
+        rgba(74, 27, 1, .14);
+}
+
+
+/* =====================================================
+   IMAGEN DEL PRODUCTO
+===================================================== */
+
+.producto-imagen {
+    width: 100%;
+
+    height: 280px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #FBECCF,
+            #F8F4DF
+        );
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.producto-imagen img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+
+    transition:
+        transform .4s ease;
+}
+
+.producto-card:hover
+.producto-imagen img {
+    transform:
+        scale(1.07);
+}
+
+
+/* =====================================================
+   INFORMACIÓN
+===================================================== */
+
+.producto-info {
+    padding: 24px 24px 26px;
+}
+
+.producto-categoria {
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    color: #A85428;
+
+    letter-spacing: .6px;
+}
+
+.producto-info h3 {
+    margin-top: 7px;
+
+    font-family:
+        "Lilita One",
+        sans-serif;
+
+    font-size: 28px;
+
+    line-height: 1.05;
+
+    color: #4A1B01;
+}
+
+.producto-info p {
+    margin-top: 10px;
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    line-height: 1.4;
+
+    color: #6A3A18;
+}
+
+
+/* =====================================================
+   BOTÓN
+===================================================== */
+
+.producto-btn {
+    margin-top: 18px;
+
+    padding:
+        10px 16px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background: #F9A600;
+
+    color: #4A1B01;
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    transition:
+        transform .2s ease,
+        background .2s ease;
+}
+
+.producto-btn:hover {
+    background: #F7B52B;
+
+    transform:
+        translateX(3px);
+}
+
+.producto-btn span {
+    font-size: 19px;
+
+    line-height: 1;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .productos-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .productos {
+        padding:
+            50px 20px 60px;
+    }
+
+    .productos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .productos-header h2 {
+        font-size: 34px;
+    }
+
+    .producto-imagen {
+        height: 250px;
+    }
+
+}
+/* =====================================================
+   NAVEGACIÓN GLOBAL SAMILU
+   Todos los menús funcionan desde cualquier página
+===================================================== */
+
+.nav-item {
+    position: relative;
+}
+
+/* El enlace principal ocupa toda su área */
+.nav-button {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+/* Enlace principal */
+.nav-button .nav-link,
+.nav-item > .nav-link {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    position: relative;
+    z-index: 5;
+}
+
+/* =====================================================
+   SUBMENÚ
+===================================================== */
+
+.dropdown-menu {
+    display: none;
+
+    position: absolute;
+
+    top: calc(100% - 1px);
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    min-width: 230px;
+    max-height: 70vh;
+
+    overflow-y: auto;
+
+    background: #FBF5E8;
+
+    border: 1px solid rgba(166, 91, 23, .18);
+
+    border-radius: 0 0 16px 16px;
+
+    box-shadow:
+        0 12px 28px rgba(74, 27, 1, .14);
+
+    padding: 8px;
+
+    z-index: 5000;
+}
+
+/* Mostrar submenu al pasar el mouse */
+.dropdown-item:hover .dropdown-menu,
+.dropdown-item:focus-within .dropdown-menu {
+    display: block;
+}
+
+/* Enlaces del submenu */
+.dropdown-menu a {
+    display: block;
+
+    width: 100%;
+
+    padding: 10px 14px;
+
+    color: #4A1B01;
+
+    font-family: "Fredoka", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        transform .2s ease;
+}
+
+.dropdown-menu a:hover {
+    background: #F9A600;
+
+    color: #FFFFFF;
+
+    transform: translateX(3px);
+}
+
+/* =====================================================
+   OCULTAR LAS FLECHAS VISIBLES
+===================================================== */
+
+.nav-button span {
+    display: none !important;
+}
+
+/* =====================================================
+   MENÚ ACTIVO
+===================================================== */
+
+body[data-page="inicio"] .nav-item[data-page="inicio"] .nav-link,
+body[data-page="empresa"] .nav-item[data-page="empresa"] .nav-link,
+body[data-page="publico"] .nav-item[data-page="publico"] .nav-link,
+body[data-page="corporativa"] .nav-item[data-page="corporativa"] .nav-link,
+body[data-page="visual"] .nav-item[data-page="visual"] .nav-link,
+body[data-page="imagen"] .nav-item[data-page="imagen"] .nav-link,
+body[data-page="aplicaciones"] .nav-item[data-page="aplicaciones"] .nav-link,
+body[data-page="comunicacion"] .nav-item[data-page="comunicacion"] .nav-link,
+body[data-page="manual"] .nav-item[data-page="manual"] .nav-link,
+body[data-page="propuestas"] .nav-item[data-page="propuestas"] .nav-link {
+    color: #FFFFFF;
+    background: #F9A600;
+    border-radius: 12px;
+}
+
+/* =====================================================
+   SUBMENÚ POR ENCIMA DEL CONTENIDO
+===================================================== */
+
+.navbar {
+    position: relative;
+    z-index: 1000;
+}
+
+.dropdown-menu {
+    z-index: 9999;
+}

@@ -1,0 +1,3028 @@
+/* =====================================================
+   SAMILU — EMPRESA
+
+   Identidad:
+   Crema + miel + naranja + marrón + verde
+===================================================== */
+
+:root {
+
+    --cream: #FBECCF;
+    --cream-light: #FFF9ED;
+    --cream-dark: #F4E2B8;
+
+    --orange: #F9A600;
+    --orange-light: #FFB52A;
+
+    --brown: #4A1B01;
+    --brown-light: #6D3212;
+
+    --green: #A5AE1F;
+    --green-dark: #5B8201;
+    --green-light: #EEF1C9;
+
+    --white: #FFFFFF;
+
+    --shadow:
+        0 15px 40px rgba(74, 27, 1, .10);
+
+    --radius: 24px;
+}
+
+
+/* =====================================================
+   GENERAL
+===================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--cream-light);
+    color: var(--brown);
+    font-family: "Jua", sans-serif;
+    overflow-x: hidden;
+}
+
+button,
+a {
+    font-family: inherit;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+}
+
+
+/* =====================================================
+   ENCABEZADO SAMILU
+===================================================== */
+
+.header {
+    width: 100%;
+    height: 96px;
+
+    background: #FBECCF;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.header-logo {
+    position: absolute;
+
+    left: 82px;
+    top: 12px;
+
+    width: 115px;
+    height: 67px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.header-logo img {
+    width: 115px;
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+.header-title {
+    font-family:
+        "Lilita One",
+        sans-serif;
+
+    font-size: 23px;
+
+    color: #4A1B01;
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   NAVBAR SAMILU
+===================================================== */
+
+.navbar {
+    width: calc(100% - 70px);
+
+    min-height: 76px;
+
+    margin: 0 auto;
+
+    padding: 8px 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 4px;
+
+    box-sizing: border-box;
+
+    background: #FBF5E8;
+
+    border:
+        1px solid
+        rgba(166, 91, 23, .18);
+
+    border-radius:
+        0 0 24px 24px;
+
+    box-shadow:
+        0 8px 22px
+        rgba(74, 27, 1, .08);
+
+    position: relative;
+
+    z-index: 1000;
+}
+
+.navbar::before {
+    content: "";
+
+    position: absolute;
+
+    left: 25px;
+    top: 0;
+
+    width: 90px;
+    height: 3px;
+
+    background: #F9A600;
+
+    border-radius:
+        0 0 8px 8px;
+}
+
+.nav-item {
+    position: relative;
+
+    flex: 1 1 0;
+
+    min-width: 0;
+
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 3px;
+
+    border: none;
+
+    transition:
+        transform .25s ease;
+}
+
+.nav-item:first-child,
+.nav-item:last-child {
+    border-left: none;
+    border-right: none;
+}
+
+
+/* =====================================================
+   MENÚ PRINCIPAL
+===================================================== */
+
+.nav-item > a,
+.nav-link,
+.nav-button {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    padding: 8px 12px;
+
+    border-radius: 16px;
+
+    color: #4A1B01;
+
+    text-decoration: none;
+
+    font-family:
+        "Lilita One",
+        sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 400;
+
+    line-height: 1.05;
+
+    text-align: center;
+
+    transition:
+        background .25s ease,
+        color .25s ease,
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.nav-button {
+    gap: 0;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   SIN FLECHAS
+===================================================== */
+
+.nav-button span {
+    display: none !important;
+}
+
+
+/* =====================================================
+   HOVER
+===================================================== */
+
+.nav-item:hover > a,
+.nav-item:hover > .nav-button {
+    background:
+        rgba(249, 166, 0, .12);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =====================================================
+   MENÚ ACTIVO
+===================================================== */
+
+.nav-item.active > a,
+.nav-item.active > .nav-button {
+    background: #F9A600;
+
+    color: #4A1B01;
+
+    box-shadow:
+        0 6px 15px
+        rgba(249, 166, 0, .25);
+
+    transform:
+        translateY(-2px);
+}
+
+.nav-item.active:hover > a,
+.nav-item.active:hover > .nav-button {
+    background: #F9A600;
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* =====================================================
+   SUBMENÚ
+===================================================== */
+
+.dropdown-menu {
+    position: absolute;
+
+    top: calc(100% + 5px);
+
+    left: 50%;
+
+    width: 255px;
+    min-width: 255px;
+
+    box-sizing: border-box;
+
+    background: #FBF5E8;
+
+    border:
+        1px solid
+        rgba(249, 166, 0, .40);
+
+    border-radius:
+        0 0 16px 16px;
+
+    box-shadow:
+        0 15px 30px
+        rgba(74, 27, 1, .14);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transform:
+        translate(-50%, -8px);
+
+    overflow: visible;
+
+    z-index: 5000;
+
+    transition:
+        opacity .22s ease,
+        visibility .22s ease,
+        transform .22s ease;
+}
+
+.dropdown-item:hover .dropdown-menu,
+.dropdown-item.open .dropdown-menu {
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform:
+        translate(-50%, 0);
+}
+
+
+/* =====================================================
+   SUBTEMAS — FREDOKA
+===================================================== */
+
+.dropdown-menu a {
+    display: block;
+
+    width: 100%;
+
+    min-height: 42px;
+
+    box-sizing: border-box;
+
+    padding: 11px 16px;
+
+    background: #FBF5E8;
+
+    color: #4A1B01;
+
+    text-decoration: none;
+
+    font-family:
+        "Fredoka",
+        sans-serif !important;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    font-style: normal;
+
+    line-height: 1.35;
+
+    letter-spacing: 0;
+
+    text-align: left;
+
+    white-space: normal;
+
+    overflow: visible;
+
+    overflow-wrap: break-word;
+
+    border-bottom:
+        1px solid
+        rgba(249, 187, 40, .30);
+
+    transition:
+        background .2s ease,
+        padding-left .2s ease,
+        color .2s ease;
+}
+
+.dropdown-menu a:last-child {
+    border-bottom: none;
+
+    border-radius:
+        0 0 15px 15px;
+}
+
+.dropdown-menu a:hover {
+    background: #F9A600;
+
+    color: #4A1B01;
+
+    padding-left: 21px;
+}
+
+/* =====================================================
+   HERO EMPRESA
+===================================================== */
+
+.empresa-hero {
+
+    min-height: 540px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: grid;
+
+    grid-template-columns:
+        46% 54%;
+
+    align-items: center;
+
+    padding: 65px 7%;
+
+    background:
+        linear-gradient(
+            120deg,
+            #FBECCF 0%,
+            #FFF9ED 52%,
+            #EEF1C9 100%
+        );
+}
+
+
+.empresa-hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+
+    height: 450px;
+
+    right: -180px;
+
+    top: -180px;
+
+    background:
+        var(--green-light);
+
+    border-radius: 50%;
+
+    opacity: .7;
+}
+
+
+.empresa-hero-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    max-width: 600px;
+}
+
+
+.eyebrow,
+.section-label {
+
+    display: inline-block;
+
+    color:
+        var(--green-dark);
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    font-weight: bold;
+
+    margin-bottom: 18px;
+}
+
+
+.empresa-hero h1 {
+
+    font-family:
+        "Lilita One", sans-serif;
+
+    font-size:
+        clamp(48px, 5vw, 78px);
+
+    line-height: .98;
+
+    color:
+        var(--brown);
+
+    margin-bottom: 25px;
+}
+
+
+.empresa-hero h1 span {
+
+    display: block;
+
+    color:
+        var(--orange);
+}
+
+
+.empresa-hero p {
+
+    max-width: 520px;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    color:
+        var(--brown-light);
+
+    margin-bottom: 30px;
+}
+
+
+.hero-scroll {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 14px 22px;
+
+    border-radius: 50px;
+
+    background:
+        var(--orange);
+
+    color:
+        var(--brown);
+
+    text-decoration: none;
+
+    transition:
+        .3s ease;
+}
+
+
+.hero-scroll span {
+
+    font-size: 20px;
+}
+
+
+.hero-scroll:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(249, 166, 0, .30);
+}
+
+
+/* =====================================================
+   ESPACIO DE IMAGEN
+===================================================== */
+
+.image-slot {
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--green-light),
+            var(--cream-dark)
+        );
+
+    border-radius: 30px;
+
+    min-height: 280px;
+}
+
+
+.image-slot img {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: 2;
+}
+
+
+.image-placeholder {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    color:
+        var(--brown);
+
+    z-index: 1;
+
+    text-align: center;
+}
+
+
+.image-placeholder span {
+
+    font-family:
+        "Lilita One", sans-serif;
+
+    font-size: 30px;
+
+    color:
+        var(--orange);
+}
+
+
+.image-placeholder small {
+
+    font-size: 13px;
+
+    opacity: .7;
+}
+
+
+.hero-image-slot {
+
+    height: 400px;
+
+    box-shadow:
+        var(--shadow);
+
+    transform:
+        rotate(2deg);
+
+    z-index: 4;
+}
+
+
+/* =====================================================
+   DECORACIONES
+===================================================== */
+
+.hero-decoration {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+.hero-decoration-one {
+
+    width: 90px;
+
+    height: 90px;
+
+    left: 3%;
+
+    bottom: 30px;
+
+    background:
+        var(--orange);
+
+    opacity: .8;
+}
+
+
+.hero-decoration-two {
+
+    width: 130px;
+
+    height: 130px;
+
+    right: 42%;
+
+    bottom: -70px;
+
+    background:
+        var(--green);
+
+    opacity: .55;
+}
+
+
+/* =====================================================
+   SECCIONES
+===================================================== */
+
+.section {
+
+    padding:
+        100px 7%;
+}
+
+
+.section-heading {
+
+    max-width: 720px;
+
+    margin-bottom: 50px;
+}
+
+
+.section-heading.center {
+
+    text-align: center;
+
+    margin-left: auto;
+
+    margin-right: auto;
+}
+
+
+.section-heading h2 {
+
+    font-family:
+        "Lilita One", sans-serif;
+
+    font-size:
+        clamp(36px, 4vw, 58px);
+
+    line-height: 1;
+
+    margin-bottom: 18px;
+
+    color:
+        var(--brown);
+}
+
+
+.section-heading p {
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    color:
+        var(--brown-light);
+}
+
+
+/* =====================================================
+   DATOS
+===================================================== */
+
+.datos-section {
+
+    padding:
+        100px 7%;
+
+    background:
+        var(--white);
+}
+
+
+.company-selector {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 14px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =====================================================
+   TARJETAS DE EMPRESA
+===================================================== */
+
+.company-card {
+
+    position: relative;
+
+    text-align: left;
+
+    min-height: 180px;
+
+    padding:
+        22px 22px 28px;
+
+    border-radius:
+        22px;
+
+    background:
+        #FBF5E8;
+
+    color:
+        var(--brown);
+
+    border:
+        1px solid transparent;
+
+    transition:
+        .3s ease;
+
+    cursor: pointer;
+
+    overflow: hidden;
+}
+
+
+.company-card:hover {
+
+    transform:
+        translateY(-7px);
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.company-card.active {
+
+    background:
+        var(--green-light);
+
+    border:
+        1px dashed var(--green);
+
+    transform:
+        translateY(-5px);
+}
+
+
+/* =====================================================
+   NÚMERO DE TARJETA
+===================================================== */
+
+.card-icon {
+
+    display: block;
+
+    font-family:
+        "Lilita One", sans-serif;
+
+    font-size:
+        22px;
+
+    color:
+        var(--orange);
+
+    margin-bottom:
+        20px;
+
+    line-height:
+        1;
+}
+
+
+/* =====================================================
+   TÍTULO DE TARJETA
+===================================================== */
+
+.company-card strong {
+
+    display: block;
+
+    font-size:
+        20px;
+
+    line-height:
+        1.2;
+
+    margin-bottom:
+        10px;
+
+    color:
+        var(--brown);
+}
+
+
+/* =====================================================
+   INFORMACIÓN DE TARJETA
+   CORREGIDO: MÁS GRANDE
+===================================================== */
+
+.company-card small {
+
+    display: block;
+
+    width:
+        calc(100% - 30px);
+
+    line-height:
+        1.45;
+
+    font-size:
+        15px;
+
+    color:
+        var(--brown);
+
+    font-family:
+        "Jua", sans-serif;
+}
+
+
+/* =====================================================
+   FLECHA
+===================================================== */
+
+.card-arrow {
+
+    position: absolute;
+
+    right:
+        20px;
+
+    bottom:
+        20px;
+
+    color:
+        var(--orange);
+
+    font-size:
+        22px;
+
+    transition:
+        transform .3s ease;
+}
+
+
+.company-card:hover .card-arrow {
+
+    transform:
+        translateX(6px);
+}
+
+
+.company-card.active .card-arrow {
+
+    color:
+        var(--orange);
+}
+
+
+/* =====================================================
+   DETALLE DATOS
+===================================================== */
+
+.company-detail {
+
+    display: grid;
+
+    grid-template-columns:
+        45% 55%;
+
+    min-height:
+        390px;
+
+    border-radius:
+        30px;
+
+    overflow:
+        hidden;
+
+    background:
+        var(--cream);
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.detail-text {
+
+    padding:
+        55px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+}
+
+
+.detail-number {
+
+    font-family:
+        "Lilita One", sans-serif;
+
+    color:
+        var(--orange);
+
+    font-size:
+        20px;
+
+    margin-bottom:
+        8px;
+}
+
+
+.detail-label {
+
+    font-size:
+        12px;
+
+    letter-spacing:
+        2px;
+
+    color:
+        var(--green-dark);
+
+    margin-bottom:
+        12px;
+}
+
+
+.detail-text h3 {
+
+    font-family:
+        "Lilita One", sans-serif;
+
+    font-size:
+        38px;
+
+    line-height:
+        1.05;
+
+    margin-bottom:
+        20px;
+}
+
+
+.detail-text p {
+
+    font-size:
+        17px;
+
+    line-height:
+        1.6;
+
+    max-width:
+        500px;
+}
+
+
+.detail-image {
+
+    min-height:
+        390px;
+
+    border-radius:
+        0;
+}
+
+
+/* =====================================================
+   DESCRIPCIÓN
+===================================================== */
+
+.description-section {
+
+    padding:
+        100px 7%;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        70px;
+
+    align-items:
+        center;
+
+    background:
+        var(--cream);
+}
+
+
+.description-image {
+
+    min-height:
+        480px;
+
+    box-shadow:
+        var(--shadow);
+
+    transform:
+        rotate(-2deg);
+}
+
+
+.description-content h2 {
+
+    font-family:
+        "Lilita One", sans-serif;
+
+    font-size:
+        clamp(42px, 4vw, 62px);
+
+    line-height:
+        1;
+
+    margin-bottom:
+        25px;
+}
+
+
+.description-content h2 span {
+
+    display:
+        block;
+
+    color:
+        var(--orange);
+}
+
+
+.description-content p {
+
+    font-size:
+        17px;
+
+    line-height:
+        1.7;
+
+    margin-bottom:
+        18px;
+}
+
+
+.product-list {
+
+    margin-top:
+        30px;
+
+    display:
+        grid;
+
+    gap:
+        10px;
+}
+
+
+.product-item {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        16px;
+
+    padding:
+        15px 18px;
+
+    background:
+        rgba(255,255,255,.65);
+
+    border-radius:
+        15px;
+
+    transition:
+        .25s ease;
+}
+
+
+.product-item:hover {
+
+    transform:
+        translateX(8px);
+
+    background:
+        var(--white);
+}
+
+
+.product-item span {
+
+    color:
+        var(--orange);
+
+    font-family:
+        "Lilita One", sans-serif;
+}
+
+
+/* =====================================================
+   MISIÓN / VISIÓN
+===================================================== */
+
+.purpose-section {
+
+    padding:
+        110px 7%;
+
+    background:
+        var(--white);
+}
+
+
+.purpose-grid {
+
+    display:
+        grid;
+
+    gap:
+        30px;
+}
+
+
+.purpose-card {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        70px 1fr 360px;
+
+    min-height:
+        330px;
+
+    border-radius:
+        28px;
+
+    overflow:
+        hidden;
+
+    box-shadow:
+        var(--shadow);
+
+    transition:
+        .35s ease;
+}
+
+
+.purpose-card:hover {
+
+    transform:
+        translateY(-6px);
+}
+
+
+.mission-card {
+
+    background:
+        var(--cream);
+}
+
+
+.vision-card {
+
+    background:
+        var(--green-light);
+}
+
+
+.purpose-number {
+
+    padding-top:
+        35px;
+
+    text-align:
+        center;
+
+    color:
+        var(--orange);
+
+    font-family:
+        "Lilita One", sans-serif;
+
+    font-size:
+        22px;
+}
+
+
+.purpose-content {
+
+    padding:
+        45px 35px;
+}
+
+
+.purpose-content > span {
+
+    color:
+        var(--green-dark);
+
+    letter-spacing:
+        2px;
+
+    font-size:
+        13px;
+}
+
+
+.purpose-content h3 {
+
+    font-family:
+        "Lilita One", sans-serif;
+
+    font-size:
+        40px;
+
+    line-height:
+        1.05;
+
+    margin:
+        12px 0 20px;
+}
+
+
+.purpose-content p {
+
+    font-size:
+        16px;
+
+    line-height:
+        1.65;
+}
+
+
+.purpose-image {
+
+    min-height:
+        330px;
+
+    border-radius:
+        0;
+}
+
+
+/* =====================================================
+   VALORES
+===================================================== */
+
+.values-section {
+
+    padding:
+        110px 7%;
+
+    background:
+        var(--cream);
+}
+
+
+.values-layout {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        330px 1fr;
+
+    gap:
+        30px;
+
+    align-items:
+        stretch;
+}
+
+
+.values-buttons {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        10px;
+}
+
+
+.value-button {
+
+    min-height:
+        70px;
+
+    padding:
+        15px 20px;
+
+    background:
+        var(--white);
+
+    color:
+        var(--brown);
+
+    border-radius:
+        15px;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        40px 1fr 25px;
+
+    align-items:
+        center;
+
+    text-align:
+        left;
+
+    font-size:
+        16px;
+
+    transition:
+        .3s ease;
+}
+
+
+.value-button span {
+
+    color:
+        var(--orange);
+
+    font-family:
+        "Lilita One", sans-serif;
+}
+
+
+.value-button b {
+
+    color:
+        var(--orange);
+}
+
+
+.value-button:hover {
+
+    transform:
+        translateX(5px);
+}
+
+
+.value-button.active {
+
+    background:
+        var(--orange);
+
+    color:
+        var(--brown);
+
+    transform:
+        translateX(8px);
+}
+
+
+.value-button.active span,
+.value-button.active b {
+
+    color:
+        var(--brown);
+}
+
+
+.value-display {
+
+    min-height:
+        430px;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        52% 48%;
+
+    background:
+        var(--white);
+
+    border-radius:
+        28px;
+
+    overflow:
+        hidden;
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.value-display-image {
+
+    min-height:
+        430px;
+
+    border-radius:
+        0;
+}
+
+
+.value-display-content {
+
+    padding:
+        50px 40px;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    flex-direction:
+        column;
+}
+
+
+.value-number {
+
+    color:
+        var(--orange);
+
+    font-family:
+        "Lilita One", sans-serif;
+
+    font-size:
+        22px;
+
+    margin-bottom:
+        10px;
+}
+
+
+.value-display-content h3 {
+
+    font-family:
+        "Lilita One", sans-serif;
+
+    font-size:
+        50px;
+
+    margin:
+        15px 0;
+}
+
+
+.value-display-content p {
+
+    font-size:
+        17px;
+
+    line-height:
+        1.65;
+}
+
+
+/* =====================================================
+   PERSONALIDAD
+===================================================== */
+
+.personality-section {
+
+    padding:
+        110px 7%;
+
+    background:
+        var(--white);
+}
+
+
+.personality-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap:
+        15px;
+
+    margin-bottom:
+        25px;
+}
+
+
+.personality-card {
+
+    min-height:
+        150px;
+
+    padding:
+        22px;
+
+    background:
+        var(--cream);
+
+    border-radius:
+        22px;
+
+    text-align:
+        left;
+
+    color:
+        var(--brown);
+
+    transition:
+        .3s ease;
+
+    border:
+        1px solid transparent;
+}
+
+
+.personality-card:hover {
+
+    transform:
+        translateY(-6px);
+}
+
+
+.personality-card.active {
+
+    background:
+        var(--green-light);
+
+    border:
+        1px dashed var(--green);
+}
+
+
+.personality-card span {
+
+    display:
+        block;
+
+    color:
+        var(--orange);
+
+    margin-bottom:
+        18px;
+}
+
+
+.personality-card strong {
+
+    display:
+        block;
+
+    font-size:
+        21px;
+
+    margin-bottom:
+        8px;
+}
+
+
+.personality-card small {
+
+    line-height:
+        1.4;
+
+    font-size:
+        14px;
+}
+
+
+.personality-display {
+
+    min-height:
+        390px;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        55% 45%;
+
+    border-radius:
+        28px;
+
+    overflow:
+        hidden;
+
+    background:
+        var(--green-light);
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.personality-image {
+
+    border-radius:
+        0;
+
+    min-height:
+        390px;
+}
+
+
+.personality-content {
+
+    padding:
+        55px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+}
+
+
+.personality-number {
+
+    color:
+        var(--orange);
+
+    font-family:
+        "Lilita One", sans-serif;
+
+    font-size:
+        22px;
+}
+
+
+.personality-content h3 {
+
+    font-family:
+        "Lilita One", sans-serif;
+
+    font-size:
+        52px;
+
+    margin:
+        12px 0 18px;
+}
+
+
+.personality-content p {
+
+    font-size:
+        17px;
+
+    line-height:
+        1.65;
+}
+
+
+/* =====================================================
+   CIERRE
+===================================================== */
+
+.empresa-closing {
+
+    min-height:
+        360px;
+
+    padding:
+        80px 20px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    text-align:
+        center;
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    background:
+        var(--brown);
+
+    color:
+        var(--cream);
+}
+
+
+.empresa-closing::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        500px;
+
+    height:
+        500px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--green-dark);
+
+    opacity:
+        .25;
+
+    left:
+        -200px;
+
+    bottom:
+        -300px;
+}
+
+
+.empresa-closing span {
+
+    color:
+        var(--orange);
+
+    font-size:
+        18px;
+
+    letter-spacing:
+        3px;
+
+    margin-bottom:
+        15px;
+}
+
+
+.empresa-closing h2 {
+
+    position:
+        relative;
+
+    font-family:
+        "Lilita One", sans-serif;
+
+    font-size:
+        clamp(40px, 5vw, 65px);
+
+    max-width:
+        700px;
+
+    line-height:
+        1;
+}
+
+
+.empresa-closing p {
+
+    position:
+        relative;
+
+    margin-top:
+        20px;
+
+    font-size:
+        17px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+
+    min-height:
+        110px;
+
+    background:
+        var(--cream);
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    gap:
+        25px;
+
+    color:
+        var(--brown);
+}
+
+
+.footer img {
+
+    width:
+        95px;
+}
+
+
+.footer p {
+
+    font-size:
+        14px;
+}
+
+
+/* =====================================================
+   ANIMACIONES
+===================================================== */
+
+.company-detail,
+.purpose-card,
+.value-display,
+.personality-display {
+
+    animation:
+        fadeUp .6s ease;
+}
+
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .navbar {
+
+        overflow-x:
+            auto;
+    }
+
+
+    .nav-item {
+
+        flex:
+            0 0 145px;
+    }
+
+
+    .company-selector {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap:
+            14px;
+    }
+
+
+    /* TARJETAS MÁS LEGIBLES */
+
+    .company-card {
+
+        min-height:
+            175px;
+
+        padding:
+            20px;
+    }
+
+
+    .company-card strong {
+
+        font-size:
+            19px;
+    }
+
+
+    .company-card small {
+
+        font-size:
+            15px;
+
+        line-height:
+            1.45;
+    }
+
+
+    .purpose-card {
+
+        grid-template-columns:
+            50px 1fr;
+    }
+
+
+    .purpose-image {
+
+        grid-column:
+            1 / -1;
+
+        min-height:
+            280px;
+    }
+
+
+    .personality-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* =====================================================
+   TABLET / MÓVIL
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .header {
+
+        height:
+            100px;
+
+        padding:
+            0 25px;
+    }
+
+
+    .header-logo {
+
+        width:
+            auto;
+    }
+
+
+    .header-logo img {
+
+        width:
+            110px;
+    }
+
+
+    .header-title {
+
+        display:
+            none;
+    }
+
+
+    .empresa-hero {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            40px;
+
+        padding:
+            55px 7%;
+    }
+
+
+    .hero-image-slot {
+
+        min-height:
+            300px;
+    }
+
+
+    .company-selector {
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap:
+            14px;
+    }
+
+
+    .company-card {
+
+        min-height:
+            170px;
+
+        padding:
+            20px;
+    }
+
+
+    .company-card strong {
+
+        font-size:
+            19px;
+    }
+
+
+    .company-card small {
+
+        font-size:
+            15px;
+
+        line-height:
+            1.45;
+    }
+
+
+    .company-detail {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .detail-image {
+
+        min-height:
+            300px;
+    }
+
+
+    .description-section {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .values-layout {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .value-display {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .value-display-image {
+
+        min-height:
+            300px;
+    }
+
+
+    .personality-display {
+
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+
+/* =====================================================
+   MÓVIL PEQUEÑO
+===================================================== */
+
+@media (max-width: 520px) {
+
+    .company-selector {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .personality-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .purpose-card {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .purpose-number {
+
+        display:
+            none;
+    }
+
+
+    .purpose-content {
+
+        padding:
+            35px 25px;
+    }
+
+
+    .section {
+
+        padding:
+            70px 5%;
+    }
+
+}
+.company-card,
+.company-card strong,
+.company-card small {
+    overflow: visible;
+}
+/* =====================================================
+   ANIMACIONES E INTERACTIVIDAD — EMPRESA
+===================================================== */
+
+/* =====================================================
+   ENTRADA GENERAL DE LA PÁGINA
+===================================================== */
+
+body {
+    opacity: 0;
+    transition: opacity .6s ease;
+}
+
+body.page-loaded {
+    opacity: 1;
+}
+
+
+/* =====================================================
+   TARJETAS DE DATOS DE LA EMPRESA
+===================================================== */
+
+.company-card {
+    transition:
+        transform .3s cubic-bezier(.2,.8,.2,1),
+        box-shadow .3s ease,
+        background .3s ease,
+        border-color .3s ease;
+}
+
+.company-card:hover {
+    transform:
+        translateY(-7px)
+        scale(1.02);
+
+    box-shadow:
+        0 14px 30px rgba(74,27,1,.12);
+}
+
+.company-card:active {
+    transform:
+        translateY(-1px)
+        scale(.96);
+}
+
+
+/* =====================================================
+   CAMBIO DEL CONTENIDO DE EMPRESA
+===================================================== */
+
+.company-detail {
+    transition:
+        opacity .3s ease,
+        transform .3s ease;
+}
+
+.company-detail.changing {
+    opacity: 0;
+
+    transform:
+        translateY(15px);
+}
+
+
+/* =====================================================
+   IMAGEN DE EMPRESA
+===================================================== */
+
+.detail-image img {
+    transition:
+        transform .5s ease,
+        filter .4s ease;
+}
+
+.detail-image:hover img {
+    transform:
+        scale(1.06);
+
+    filter:
+        brightness(1.04);
+}
+
+
+/* =====================================================
+   MISIÓN Y VISIÓN
+===================================================== */
+
+.purpose-card {
+    transition:
+        transform .35s cubic-bezier(.2,.8,.2,1),
+        box-shadow .35s ease;
+}
+
+.purpose-card:hover {
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 18px 35px rgba(74,27,1,.13);
+}
+
+.purpose-image img {
+    transition:
+        transform .5s ease;
+}
+
+.purpose-card:hover
+.purpose-image img {
+    transform:
+        scale(1.06);
+}
+
+
+/* =====================================================
+   VALORES
+===================================================== */
+
+.value-button {
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        color .25s ease,
+        box-shadow .25s ease;
+}
+
+.value-button:hover {
+    transform:
+        translateX(6px);
+}
+
+.value-button:active {
+    transform:
+        translateX(2px)
+        scale(.97);
+}
+
+.value-display {
+    transition:
+        opacity .3s ease,
+        transform .3s ease;
+}
+
+.value-display.changing {
+    opacity: 0;
+
+    transform:
+        translateY(15px)
+        scale(.98);
+}
+
+.value-display-image img {
+    transition:
+        transform .5s ease;
+}
+
+.value-display-image:hover img {
+    transform:
+        scale(1.06);
+}
+
+
+/* =====================================================
+   PERSONALIDAD
+===================================================== */
+
+.personality-card {
+    transition:
+        transform .3s cubic-bezier(.2,.8,.2,1),
+        box-shadow .3s ease,
+        background .3s ease;
+}
+
+.personality-card:hover {
+    transform:
+        translateY(-7px)
+        scale(1.02);
+
+    box-shadow:
+        0 14px 28px rgba(74,27,1,.12);
+}
+
+.personality-card:active {
+    transform:
+        translateY(-1px)
+        scale(.96);
+}
+
+.personality-display {
+    transition:
+        opacity .3s ease,
+        transform .3s ease;
+}
+
+.personality-display.changing {
+    opacity: 0;
+
+    transform:
+        translateY(15px)
+        scale(.98);
+}
+
+.personality-image img {
+    transition:
+        transform .5s ease;
+}
+
+.personality-image:hover img {
+    transform:
+        scale(1.06);
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.empresa-hero-content {
+    animation:
+        heroTextIn .8s ease both;
+}
+
+.hero-image-slot {
+    animation:
+        heroImageIn 1s ease .15s both;
+}
+
+@keyframes heroTextIn {
+
+    from {
+        opacity: 0;
+        transform:
+            translateX(-35px);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateX(0);
+    }
+
+}
+
+@keyframes heroImageIn {
+
+    from {
+        opacity: 0;
+        transform:
+            translateX(35px)
+            scale(.96);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateX(0)
+            scale(1);
+    }
+
+}
+
+
+/* =====================================================
+   DESPLAZAMIENTO SUAVE DE TODA LA PÁGINA
+===================================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* =====================================================
+   REDUCIR ANIMACIONES EN DISPOSITIVOS QUE LO PIDAN
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration: .01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: .01ms !important;
+
+        scroll-behavior: auto !important;
+
+    }
+
+}
+/* =========================================================
+   AJUSTE DE TIPOGRAFÍA Y TAMAÑOS — EMPRESA
+   Más presencia + mejor aprovechamiento del espacio
+========================================================= */
+
+/* ---------------------------------------------------------
+   TÍTULOS PRINCIPALES
+   Un poco más ligeros visualmente
+--------------------------------------------------------- */
+
+.empresa-hero h1,
+.section-heading h2,
+.description-content h2,
+.detail-text h3,
+.purpose-content h3,
+.value-display-content h3,
+.personality-content h3,
+.empresa-closing h2 {
+
+    font-family: "Fredoka", sans-serif !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.5px;
+}
+
+/* HERO */
+.empresa-hero h1 {
+    font-size: clamp(50px, 5vw, 74px);
+    line-height: 1;
+}
+
+/* TÍTULOS DE SECCIONES */
+.section-heading h2 {
+    font-size: clamp(40px, 4vw, 60px);
+    line-height: 1.05;
+}
+
+/* DESCRIPCIÓN */
+.description-content h2 {
+    font-size: clamp(44px, 4vw, 64px);
+    line-height: 1.05;
+}
+
+/* ---------------------------------------------------------
+   DATOS DE LA EMPRESA
+   SUBTEMAS MÁS VISIBLES
+--------------------------------------------------------- */
+
+.company-card {
+    min-height: 190px;
+    padding: 25px 24px 30px;
+}
+
+/* Número 01, 02, 03... */
+.company-card .card-icon {
+    font-size: 25px;
+    margin-bottom: 22px;
+}
+
+/* Empresa / Marca / Actividad / Ubicación / Productos */
+.company-card strong {
+    font-family: "Fredoka", sans-serif !important;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.15;
+    margin-bottom: 12px;
+}
+
+/* Texto pequeño dentro de cada tarjeta */
+.company-card small {
+    font-family: "Fredoka", sans-serif !important;
+    font-size: 16.5px;
+    font-weight: 500;
+    line-height: 1.5;
+    width: calc(100% - 15px);
+}
+
+/* ---------------------------------------------------------
+   INFORMACIÓN DETALLADA DE DATOS
+--------------------------------------------------------- */
+
+.detail-number {
+    font-size: 23px;
+}
+
+.detail-label {
+    font-family: "Fredoka", sans-serif !important;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+}
+
+.detail-text h3 {
+    font-size: clamp(42px, 4vw, 56px);
+    font-weight: 600 !important;
+    line-height: 1.05;
+    margin-bottom: 22px;
+}
+
+.detail-text p {
+    font-family: "Fredoka", sans-serif !important;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.65;
+    max-width: 570px;
+}
+
+/* ---------------------------------------------------------
+   DESCRIPCIÓN DE LA EMPRESA
+--------------------------------------------------------- */
+
+.description-content p {
+    font-family: "Fredoka", sans-serif !important;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.product-item {
+    min-height: 58px;
+}
+
+.product-item span {
+    font-size: 18px;
+}
+
+.product-item {
+    font-family: "Fredoka", sans-serif !important;
+    font-size: 17px;
+}
+
+/* ---------------------------------------------------------
+   MISIÓN Y VISIÓN
+--------------------------------------------------------- */
+
+.purpose-content > span {
+    font-family: "Fredoka", sans-serif !important;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.purpose-content h3 {
+    font-size: clamp(43px, 4vw, 54px);
+    font-weight: 600 !important;
+    line-height: 1.05;
+}
+
+.purpose-content p {
+    font-family: "Fredoka", sans-serif !important;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.7;
+    max-width: 620px;
+}
+
+/* ---------------------------------------------------------
+   VALORES
+--------------------------------------------------------- */
+
+.value-button {
+    min-height: 76px;
+    font-family: "Fredoka", sans-serif !important;
+    font-size: 18px;
+}
+
+.value-display-content h3 {
+    font-size: clamp(48px, 4vw, 58px);
+    font-weight: 600 !important;
+    line-height: 1;
+}
+
+.value-display-content p {
+    font-family: "Fredoka", sans-serif !important;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+/* ---------------------------------------------------------
+   PERSONALIDAD
+--------------------------------------------------------- */
+
+.personality-card strong {
+    font-family: "Fredoka", sans-serif !important;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.personality-card small {
+    font-family: "Fredoka", sans-serif !important;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.personality-content h3 {
+    font-size: clamp(48px, 4vw, 60px);
+    font-weight: 600 !important;
+    line-height: 1;
+}
+
+.personality-content p {
+    font-family: "Fredoka", sans-serif !important;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.7;
+    max-width: 570px;
+}
+
+/* ---------------------------------------------------------
+   ETIQUETAS Y TEXTOS SECUNDARIOS
+--------------------------------------------------------- */
+
+.eyebrow,
+.section-label {
+    font-family: "Fredoka", sans-serif !important;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.empresa-closing span {
+    font-family: "Fredoka", sans-serif !important;
+    font-weight: 600;
+}
+
+.empresa-closing p {
+    font-family: "Fredoka", sans-serif !important;
+    font-size: 19px;
+    line-height: 1.6;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .company-card {
+        min-height: 185px;
+    }
+
+    .company-card strong {
+        font-size: 22px;
+    }
+
+    .company-card small {
+        font-size: 16px;
+    }
+
+    .detail-text p,
+    .description-content p,
+    .purpose-content p,
+    .value-display-content p,
+    .personality-content p {
+        font-size: 18px;
+    }
+}
+
+
+@media (max-width: 800px) {
+
+    .company-card {
+        min-height: 180px;
+    }
+
+    .company-card strong {
+        font-size: 21px;
+    }
+
+    .company-card small {
+        font-size: 15.5px;
+    }
+
+    .detail-text p,
+    .description-content p,
+    .purpose-content p,
+    .value-display-content p,
+    .personality-content p {
+        font-size: 18px;
+    }
+
+    .detail-text h3 {
+        font-size: 42px;
+    }
+
+    .purpose-content h3 {
+        font-size: 42px;
+    }
+
+    .value-display-content h3,
+    .personality-content h3 {
+        font-size: 45px;
+    }
+}
+
+
+@media (max-width: 520px) {
+
+    .company-card {
+        min-height: 175px;
+        padding: 22px;
+    }
+
+    .company-card strong {
+        font-size: 20px;
+    }
+
+    .company-card small {
+        font-size: 15px;
+    }
+
+    .detail-text {
+        padding: 40px 25px;
+    }
+
+    .detail-text h3 {
+        font-size: 38px;
+    }
+
+    .detail-text p,
+    .description-content p,
+    .purpose-content p,
+    .value-display-content p,
+    .personality-content p {
+        font-size: 17px;
+    }
+}
+/* =========================================================
+   AJUSTE DE TIPOGRAFÍA — HERO EMPRESA
+   Más presencia y coherencia con SAMILU
+========================================================= */
+
+/* Texto descriptivo debajo del título */
+.empresa-hero p {
+    font-family: "Fredoka", sans-serif !important;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 1.65;
+    color: var(--brown-light);
+    max-width: 620px;
+    letter-spacing: 0;
+}
+
+/* Etiqueta pequeña superior */
+.empresa-hero .eyebrow {
+    font-family: "Fredoka", sans-serif !important;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+/* Título principal */
+.empresa-hero h1 {
+    font-family: "Fredoka", sans-serif !important;
+    font-size: clamp(52px, 5vw, 76px);
+    font-weight: 600 !important;
+    line-height: 1;
+    letter-spacing: -0.7px;
+}
+
+/* Palabra destacada del título */
+.empresa-hero h1 span {
+    font-family: "Fredoka", sans-serif !important;
+    font-weight: 600 !important;
+}
+
+/* =========================================================
+   BOTÓN DEL HERO
+========================================================= */
+
+.hero-scroll {
+    font-family: "Fredoka", sans-serif !important;
+    font-size: 18px;
+    font-weight: 600 !important;
+    letter-spacing: 0;
+    padding: 15px 24px;
+    border-radius: 50px;
+}
+
+/* Flecha del botón */
+.hero-scroll span {
+    font-family: "Fredoka", sans-serif !important;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+/* Efecto al pasar el mouse */
+.hero-scroll:hover {
+    transform: translateY(-4px) scale(1.02);
+}
+
+/* Efecto al presionar */
+.hero-scroll:active {
+    transform: translateY(1px) scale(.96);
+}
+
+/* =========================================================
+   MÓVIL
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .empresa-hero h1 {
+        font-size: 48px;
+    }
+
+    .empresa-hero p {
+        font-size: 19px;
+    }
+
+    .hero-scroll {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .empresa-hero h1 {
+        font-size: 42px;
+    }
+
+    .empresa-hero p {
+        font-size: 18px;
+    }
+
+    .hero-scroll {
+        font-size: 16px;
+        padding: 14px 21px;
+    }
+}

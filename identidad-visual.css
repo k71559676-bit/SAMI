@@ -1,0 +1,6045 @@
+/* ==========================================================
+   SAMILU — IDENTIDAD VISUAL
+   CSS COMPLETO
+   VERSIÓN FINAL
+
+   PALETA OFICIAL DEL LOGO
+
+   DORADO
+   HEX:  #FAB902
+   RGB:  250, 180, 2
+   CMYK: 2, 30, 100, 0
+
+   MARRÓN
+   HEX:  #722E01
+   RGB:  114, 46, 1
+   CMYK: 37, 80, 100, 52
+
+   VERDE OSCURO
+   HEX:  #19681E
+   RGB:  25, 104, 30
+   CMYK: 89, 35, 100, 31
+
+   VERDE CLARO
+   HEX:  #70B123
+   RGB:  112, 177, 35
+   CMYK: 64, 7, 100, 0
+
+   CREMA
+   HEX:  #FDF6D3
+   RGB:  253, 246, 211
+   CMYK: 1, 1, 20, 0
+========================================================== */
+
+
+/* ==========================================================
+   VARIABLES
+========================================================== */
+
+:root {
+
+    /* PALETA OFICIAL */
+
+    --gold:
+        #FAB902;
+
+    --brown:
+        #722E01;
+
+    --green-dark:
+        #19681E;
+
+    --green-light:
+        #70B123;
+
+    --cream:
+        #FDF6D3;
+
+
+    /* COLORES DE APOYO */
+
+    --white:
+        #FFFFFF;
+
+    --cream-soft:
+        #FFFDF1;
+
+    --cream-light:
+        #FFF9E5;
+
+    --brown-soft:
+        #8A542D;
+
+    --green-soft:
+        #E7F1C8;
+
+
+    /* SOMBRAS */
+
+    --shadow-small:
+        0 10px 25px rgba(114, 46, 1, .08);
+
+    --shadow:
+        0 20px 45px rgba(114, 46, 1, .11);
+
+    --shadow-large:
+        0 30px 70px rgba(114, 46, 1, .16);
+
+}
+
+
+/* ==========================================================
+   RESET
+========================================================== */
+
+* {
+
+    box-sizing:
+        border-box;
+
+}
+
+
+html {
+
+    scroll-behavior:
+        smooth;
+
+}
+
+
+body {
+
+    margin:
+        0;
+
+    padding:
+        0;
+
+    overflow-x:
+        hidden;
+
+    background:
+        var(--cream);
+
+    color:
+        var(--brown);
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+}
+
+
+img {
+
+    display:
+        block;
+
+    max-width:
+        100%;
+
+}
+
+
+a {
+
+    color:
+        inherit;
+
+    text-decoration:
+        none;
+
+}
+
+
+button {
+
+    font-family:
+        inherit;
+
+}
+
+
+section {
+
+    scroll-margin-top:
+        95px;
+
+}
+
+
+/* ==========================================================
+   HEADER
+   IGUAL AL RESTO DEL SITIO
+========================================================== */
+
+.site-header {
+
+    width:
+        100%;
+
+    height:
+        98px;
+
+    position:
+        relative;
+
+    padding:
+        0 4vw;
+
+    background:
+        var(--cream);
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    z-index:
+        1000;
+
+}
+
+
+.brand-area {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    position:
+        relative;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+}
+
+
+.brand-logo-wrap {
+
+    position:
+        absolute;
+
+    left:
+        40px;
+
+    top:
+        50%;
+
+    transform:
+        translateY(-50%);
+
+    width:
+        120px;
+
+    height:
+        75px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        flex-start;
+
+}
+
+
+.brand-logo {
+
+    width:
+        120px;
+
+    height:
+        auto;
+
+    object-fit:
+        contain;
+
+}
+
+
+.brand-copy {
+
+    width:
+        100%;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+}
+
+
+.brand-copy h1 {
+
+    margin:
+        0;
+
+    font-family:
+        "Lilita One",
+        sans-serif;
+
+    font-size:
+        clamp(22px, 2.2vw, 32px);
+
+    font-weight:
+        400;
+
+    line-height:
+        1;
+
+    text-align:
+        center;
+
+    color:
+        var(--brown);
+
+}
+
+
+.brand-copy p {
+
+    display:
+        none;
+
+}
+
+
+/* ==========================================================
+   NAVBAR
+   NO MODIFICAR ENTRE PÁGINAS
+========================================================== */
+
+.navbar {
+
+    width:
+        100%;
+
+    margin:
+        0;
+
+    padding:
+        8px 18px;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        stretch;
+
+    gap:
+        3px;
+
+    background:
+        #FBF5E8;
+
+    border:
+        1px solid rgba(249,166,0,.25);
+
+    border-radius:
+        0 0 22px 22px;
+
+    box-shadow:
+        0 15px 35px rgba(74,27,1,.10);
+
+    position:
+        sticky;
+
+    top:
+        0;
+
+    z-index:
+        5000;
+
+}
+
+
+.nav-item {
+
+    position:
+        relative;
+
+    display:
+        flex;
+
+    align-items:
+        stretch;
+
+    flex:
+        1 1 auto;
+
+}
+
+
+.nav-link {
+
+    width:
+        100%;
+
+    min-height:
+        48px;
+
+    padding:
+        8px 10px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
+
+    border-radius:
+        15px;
+
+    font-family:
+        "Lilita One",
+        sans-serif;
+
+    font-size:
+        14px;
+
+    font-weight:
+        400;
+
+    line-height:
+        1.02;
+
+    color:
+        #4A1B01;
+
+    transition:
+        background .25s ease,
+        color .25s ease,
+        transform .25s ease;
+
+}
+
+
+.nav-link:hover {
+
+    background:
+        rgba(232,165,26,.13);
+
+    color:
+        #D77D0E;
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+.nav-item.active > .nav-link,
+.nav-item.active > .nav-link:hover {
+
+    background:
+        #F9A600;
+
+    color:
+        #FFFFFF;
+
+}
+
+
+/* ==========================================================
+   SUBMENÚ
+   IGUAL EN TODAS LAS PÁGINAS
+========================================================== */
+
+.dropdown-menu {
+
+    position:
+        absolute;
+
+    top:
+        calc(100% + 5px);
+
+    left:
+        0;
+
+    width:
+        255px;
+
+    min-width:
+        255px;
+
+    padding:
+        8px;
+
+    background:
+        #FBF5E8;
+
+    border:
+        1px solid rgba(249,166,0,.40);
+
+    border-radius:
+        0 0 16px 16px;
+
+    box-shadow:
+        0 15px 30px rgba(74,27,1,.14);
+
+    opacity:
+        0;
+
+    visibility:
+        hidden;
+
+    pointer-events:
+        none;
+
+    transform:
+        translateY(-8px);
+
+    z-index:
+        5000;
+
+    transition:
+        opacity .22s ease,
+        visibility .22s ease,
+        transform .22s ease;
+
+}
+
+
+.dropdown-item:hover .dropdown-menu {
+
+    opacity:
+        1;
+
+    visibility:
+        visible;
+
+    pointer-events:
+        auto;
+
+    transform:
+        translateY(0);
+
+}
+
+
+.dropdown-menu a {
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    padding:
+        10px 12px;
+
+    border-radius:
+        10px;
+
+    font-family:
+        "Fredoka",
+        sans-serif !important;
+
+    font-size:
+        14px;
+
+    font-weight:
+        500;
+
+    line-height:
+        1.28;
+
+    text-align:
+        left;
+
+    color:
+        #4A1B01;
+
+    border-bottom:
+        1px solid rgba(249,187,40,.30);
+
+    transition:
+        background .20s ease,
+        color .20s ease,
+        transform .20s ease;
+
+}
+
+
+.dropdown-menu a:last-child {
+
+    border-bottom:
+        none;
+
+}
+
+
+.dropdown-menu a:hover {
+
+    background:
+        #F9A600;
+
+    color:
+        #FFFFFF;
+
+    transform:
+        translateX(3px);
+
+}
+
+
+/* Ocultar flechas antiguas */
+
+.nav-button span {
+
+    display:
+        none !important;
+
+}
+
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.visual-hero {
+
+    width:
+        100%;
+
+    min-height:
+        680px;
+
+    padding:
+        80px 7vw;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        54% 46%;
+
+    align-items:
+        center;
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    background:
+        linear-gradient(
+            120deg,
+            #FDF6D3 0%,
+            #FFF9E5 52%,
+            #EAF3D5 100%
+        );
+
+}
+
+
+.visual-hero::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        520px;
+
+    height:
+        520px;
+
+    left:
+        -230px;
+
+    bottom:
+        -260px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(112,177,35,.15);
+
+    filter:
+        blur(25px);
+
+}
+
+
+.visual-hero::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        440px;
+
+    height:
+        440px;
+
+    right:
+        -170px;
+
+    top:
+        -210px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(250,185,2,.16);
+
+    filter:
+        blur(20px);
+
+}
+
+
+/* ==========================================================
+   HERO TEXTO
+========================================================== */
+
+.visual-hero-content {
+
+    position:
+        relative;
+
+    z-index:
+        4;
+
+    max-width:
+        820px;
+
+}
+
+
+.visual-kicker {
+
+    display:
+        inline-block;
+
+    margin-bottom:
+        17px;
+
+    color:
+        var(--green-dark);
+
+    font-size:
+        13px;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        .11em;
+
+}
+
+
+.visual-hero h2 {
+
+    margin:
+        0;
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size:
+        clamp(62px, 6.8vw, 98px);
+
+    font-weight:
+        600;
+
+    line-height:
+        .88;
+
+    letter-spacing:
+        -.025em;
+
+    color:
+        var(--brown);
+
+}
+
+
+.visual-hero h2 span {
+
+    display:
+        block;
+
+    color:
+        var(--gold);
+
+}
+
+
+.visual-hero p {
+
+    max-width:
+        710px;
+
+    margin:
+        28px 0;
+
+    font-size:
+        19px;
+
+    line-height:
+        1.7;
+
+    font-weight:
+        500;
+
+    color:
+        var(--brown-soft);
+
+}
+
+
+.hero-keywords {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        9px;
+
+}
+
+
+.hero-keywords span {
+
+    padding:
+        9px 14px;
+
+    background:
+        rgba(255,255,255,.86);
+
+    border:
+        1px solid rgba(114,46,1,.08);
+
+    border-radius:
+        100px;
+
+    font-size:
+        13px;
+
+    font-weight:
+        600;
+
+    color:
+        var(--brown);
+
+}
+
+
+/* ==========================================================
+   HERO LOGO
+========================================================== */
+
+.visual-hero-logo {
+
+    min-height:
+        520px;
+
+    position:
+        relative;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+}
+
+
+.hero-logo-glow {
+
+    position:
+        absolute;
+
+    width:
+        500px;
+
+    height:
+        500px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(250,185,2,.10);
+
+    filter:
+        blur(18px);
+
+}
+
+
+.logo-display {
+
+    position:
+        relative;
+
+    z-index:
+        3;
+
+    width:
+        min(450px,82%);
+
+    aspect-ratio:
+        1 / 1;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        45px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(255,255,255,.83);
+
+    border:
+        1px solid rgba(255,255,255,.95);
+
+    box-shadow:
+        var(--shadow-large);
+
+    animation:
+        visualFloat 5s ease-in-out infinite;
+
+}
+
+
+.logo-display small {
+
+    margin-bottom:
+        15px;
+
+    color:
+        var(--green-dark);
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        .14em;
+
+}
+
+
+.logo-display img {
+
+    width:
+        min(310px,85%);
+
+}
+
+
+.logo-display strong {
+
+    margin-top:
+        17px;
+
+    padding:
+        8px 12px;
+
+    background:
+        var(--green-light);
+
+    color:
+        var(--brown);
+
+    border-radius:
+        100px;
+
+    font-size:
+        11px;
+
+    font-weight:
+        600;
+
+}
+
+
+/* ==========================================================
+   SECCIONES
+========================================================== */
+
+.visual-section {
+
+    width:
+        100%;
+
+    margin:
+        0;
+
+    padding:
+        105px 7vw;
+
+    position:
+        relative;
+
+}
+
+
+.visual-section > * {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+}
+
+
+/* ==========================================================
+   TÍTULOS
+========================================================== */
+
+.visual-section h2 {
+
+    margin:
+        0;
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size:
+        clamp(50px,5.5vw,80px);
+
+    font-weight:
+        600;
+
+    line-height:
+        .93;
+
+    color:
+        var(--brown);
+
+}
+
+
+.visual-section h2 em {
+
+    color:
+        var(--gold);
+
+    font-style:
+        normal;
+
+}
+
+
+.visual-section p {
+
+    font-size:
+        18px;
+
+    line-height:
+        1.72;
+
+    font-weight:
+        500;
+
+    color:
+        var(--brown-soft);
+
+}
+
+
+/* ==========================================================
+   01 — LOGOTIPO
+========================================================== */
+
+.logo-section {
+
+    min-height:
+        730px;
+
+    background:
+        var(--cream-soft);
+
+}
+
+
+.section-title-block {
+
+    max-width:
+        850px;
+
+    margin-bottom:
+        55px;
+
+}
+
+
+.section-title-block > span {
+
+    display:
+        inline-block;
+
+    margin-bottom:
+        15px;
+
+    font-size:
+        12px;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        .12em;
+
+    color:
+        var(--green-dark);
+
+}
+
+
+.logo-content-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        45% 55%;
+
+    gap:
+        40px;
+
+    align-items:
+        stretch;
+
+}
+
+
+.logo-image-area {
+
+    min-height:
+        560px;
+
+    position:
+        relative;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background:
+        var(--green-soft);
+
+    border-radius:
+        60px 0 60px 0;
+
+    overflow:
+        hidden;
+
+    box-shadow:
+        var(--shadow);
+
+}
+
+
+.logo-image-area::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        300px;
+
+    height:
+        300px;
+
+    border:
+        1px dashed rgba(25,104,30,.22);
+
+    border-radius:
+        50%;
+
+}
+
+
+.image-placeholder {
+
+    width:
+        80%;
+
+    min-height:
+        350px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+}
+
+
+.image-placeholder img {
+
+    width:
+        min(400px,90%);
+
+    object-fit:
+        contain;
+
+}
+
+
+.logo-image-area > span {
+
+    position:
+        absolute;
+
+    left:
+        25px;
+
+    bottom:
+        25px;
+
+    padding:
+        10px 14px;
+
+    border-radius:
+        100px;
+
+    background:
+        rgba(255,255,255,.86);
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        .10em;
+
+    color:
+        var(--brown);
+
+}
+
+
+.logo-text-area {
+
+    padding:
+        35px 25px;
+
+}
+
+
+.logo-text-area > p {
+
+    max-width:
+        700px;
+
+}
+
+
+.logo-elements {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        14px;
+
+    margin-top:
+        30px;
+
+}
+
+
+.logo-elements article {
+
+    padding:
+        20px;
+
+    border-radius:
+        20px;
+
+    background:
+        #FFFFFF;
+
+    box-shadow:
+        var(--shadow-small);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+.logo-elements article:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        var(--shadow);
+
+}
+
+
+.logo-elements strong {
+
+    display:
+        block;
+
+    margin-bottom:
+        7px;
+
+    font-size:
+        18px;
+
+    font-weight:
+        600;
+
+    color:
+        var(--brown);
+
+}
+
+
+.logo-elements span {
+
+    font-size:
+        14px;
+
+    line-height:
+        1.55;
+
+    color:
+        var(--brown-soft);
+
+    font-weight:
+        500;
+
+}
+
+
+/* ==========================================================
+   02 — COLORES CORPORATIVOS
+========================================================== */
+
+.colors-section {
+
+    background:
+        linear-gradient(
+            135deg,
+            #FDF6D3 0%,
+            #FFFDF1 55%,
+            #E7F1C8 100%
+        );
+
+}
+
+
+.colors-heading {
+
+    max-width:
+        900px;
+
+    margin-bottom:
+        45px;
+
+}
+
+
+.colors-heading > span {
+
+    display:
+        inline-block;
+
+    margin-bottom:
+        14px;
+
+    font-size:
+        12px;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        .12em;
+
+    color:
+        var(--green-dark);
+
+}
+
+
+.colors-heading h2 {
+
+    margin:
+        0;
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size:
+        clamp(50px,5.5vw,80px);
+
+    font-weight:
+        600;
+
+    line-height:
+        .93;
+
+    color:
+        var(--brown);
+
+}
+
+
+.colors-heading h2 em {
+
+    color:
+        var(--gold);
+
+    font-style:
+        normal;
+
+}
+
+
+.colors-heading p {
+
+    max-width:
+        760px;
+
+    margin:
+        15px 0 0;
+
+    font-size:
+        18px;
+
+    line-height:
+        1.7;
+
+    font-weight:
+        500;
+
+    color:
+        var(--brown);
+
+}
+
+
+/* ==========================================================
+   TARJETAS DE COLOR
+========================================================== */
+
+.color-system {
+
+    width:
+        100%;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(5,1fr);
+
+    gap:
+        15px;
+
+}
+
+
+.color-card {
+
+    position:
+        relative;
+
+    min-height:
+        400px;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        25px;
+
+    background:
+        #FFFFFF;
+
+    box-shadow:
+        var(--shadow-small);
+
+    cursor:
+        pointer;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+
+.color-card:hover {
+
+    transform:
+        translateY(-10px)
+        scale(1.015);
+
+    box-shadow:
+        var(--shadow-large);
+
+}
+
+
+/* ==========================================================
+   MUESTRA DEL COLOR
+========================================================== */
+
+.color-swatch {
+
+    width:
+        100%;
+
+    height:
+        180px;
+
+}
+
+
+/* DORADO */
+
+.gold-swatch {
+
+    background:
+        #FAB902;
+
+}
+
+
+/* MARRÓN */
+
+.brown-swatch {
+
+    background:
+        #722E01;
+
+}
+
+
+/* VERDE OSCURO */
+
+.dark-green-swatch {
+
+    background:
+        #19681E;
+
+}
+
+
+/* VERDE CLARO */
+
+.light-green-swatch {
+
+    background:
+        #70B123;
+
+}
+
+
+/* CREMA */
+
+.cream-swatch {
+
+    background:
+        #FDF6D3;
+
+    border-bottom:
+        1px solid rgba(114,46,1,.10);
+
+}
+
+
+/* ==========================================================
+   INFORMACIÓN DEL COLOR
+========================================================== */
+
+.color-info {
+
+    padding:
+        20px;
+
+}
+
+
+.color-info strong {
+
+    display:
+        block;
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size:
+        19px;
+
+    font-weight:
+        600;
+
+    color:
+        var(--brown);
+
+}
+
+
+.color-info span {
+
+    display:
+        block;
+
+    min-height:
+        70px;
+
+    margin:
+        8px 0 0;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.5;
+
+    font-weight:
+        500;
+
+    color:
+        var(--brown-soft);
+
+}
+
+
+/* ==========================================================
+   CÓDIGOS DE COLOR
+   APARECEN AL PASAR EL PUNTERO
+========================================================== */
+
+.color-codes {
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    right:
+        0;
+
+    bottom:
+        0;
+
+    padding:
+        17px;
+
+    display:
+        grid;
+
+    gap:
+        8px;
+
+    background:
+        rgba(255,255,255,.97);
+
+    transform:
+        translateY(100%);
+
+    opacity:
+        0;
+
+    transition:
+        transform .35s ease,
+        opacity .35s ease;
+
+}
+
+
+/* Hover */
+
+.color-card:hover .color-codes {
+
+    transform:
+        translateY(0);
+
+    opacity:
+        1;
+
+}
+
+
+.color-codes div {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        10px;
+
+}
+
+/* ==========================================================
+   DATOS TÉCNICOS DEL COLOR
+========================================================== */
+
+.color-codes small {
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        .07em;
+
+    color:
+        var(--green-dark);
+
+}
+
+
+.color-codes strong {
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size:
+        20px;
+
+    font-weight:
+        600;
+
+    line-height:
+        1.2;
+
+    color:
+        var(--brown);
+
+}
+.color-codes {
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    right:
+        0;
+
+    bottom:
+        0;
+
+    padding:
+        20px;
+
+    display:
+        grid;
+
+    gap:
+        11px;
+
+    background:
+        rgba(255,255,255,.97);
+
+    transform:
+        translateY(100%);
+
+    opacity:
+        0;
+
+    transition:
+        transform .35s ease,
+        opacity .35s ease;
+
+}
+/* ==========================================================
+   DETALLE GENERAL
+========================================================== */
+
+.color-detail {
+
+    min-height:
+        125px;
+
+    margin-top:
+        22px;
+
+    padding:
+        22px 28px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        18px;
+
+    border-radius:
+        23px;
+
+    background:
+        var(--brown);
+
+    color:
+        #FFFFFF;
+
+    box-shadow:
+        var(--shadow-small);
+
+    transition:
+        background .35s ease;
+
+}
+
+
+.detail-icon {
+
+    width:
+        48px;
+
+    height:
+        48px;
+
+    flex-shrink:
+        0;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        15px;
+
+    background:
+        var(--gold);
+
+    color:
+        var(--brown);
+
+    font-size:
+        22px;
+
+}
+
+
+.detail-content {
+
+    width:
+        100%;
+
+}
+
+
+.detail-content > span {
+
+    display:
+        block;
+
+    margin-bottom:
+        9px;
+
+    font-size:
+        16px;
+
+    font-weight:
+        600;
+
+    color:
+        #FFFFFF;
+
+}
+
+
+.detail-values {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        18px;
+
+}
+
+
+.detail-values div {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+}
+
+
+.detail-values small {
+
+    color:
+        var(--gold);
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        .08em;
+
+}
+
+
+.detail-values strong {
+
+    color:
+        #FFFFFF;
+
+    font-size:
+        14px;
+
+    font-weight:
+        500;
+
+}
+
+
+/* ==========================================================
+   SIGNIFICADO DE LA PALETA
+========================================================== */
+
+.color-meaning {
+
+    margin-top:
+        22px;
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        9px;
+
+}
+
+
+.meaning-label {
+
+    padding:
+        10px 15px;
+
+    border-radius:
+        100px;
+
+    background:
+        var(--brown);
+
+    color:
+        #FFFFFF;
+
+    font-size:
+        11px;
+
+    font-weight:
+        600;
+
+}
+
+
+.meaning-line {
+
+    padding:
+        10px 15px;
+
+    border-radius:
+        100px;
+
+    background:
+        rgba(255,255,255,.78);
+
+    border:
+        1px solid rgba(114,46,1,.10);
+
+    color:
+        var(--brown);
+
+    font-size:
+        12px;
+
+    font-weight:
+        600;
+
+}
+
+
+/* ==========================================================
+   03 — TIPOGRAFÍA
+========================================================== */
+
+.typography-section {
+
+    background:
+        #FFFDF8;
+
+}
+
+
+.typography-header {
+
+    max-width:
+        850px;
+
+    margin-bottom:
+        45px;
+
+}
+
+
+.typography-header > span {
+
+    display:
+        inline-block;
+
+    margin-bottom:
+        14px;
+
+    font-size:
+        12px;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        .12em;
+
+    color:
+        var(--green-dark);
+
+}
+
+
+.type-showcase {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        18px;
+
+}
+
+
+.type-primary,
+.type-secondary {
+
+    min-height:
+        440px;
+
+    padding:
+        35px;
+
+    border-radius:
+        30px;
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+}
+
+
+/* TARJETA PRIMARIA */
+
+.type-primary {
+
+    background:
+        var(--brown);
+
+    color:
+        white;
+
+}
+
+
+/* TARJETA SECUNDARIA */
+
+.type-secondary {
+
+    background:
+        var(--green-soft);
+
+    color:
+        var(--brown);
+
+}
+
+
+.type-number {
+
+    font-size:
+        29px;
+
+    font-weight:
+        700;
+
+    color:
+        var(--gold);
+
+}
+
+
+.type-primary small,
+.type-secondary small {
+
+    display:
+        block;
+
+    margin-top:
+        10px;
+
+    font-size:
+        10px;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        .13em;
+
+}
+
+
+.type-primary small {
+
+    color:
+        #FFF5E3;
+
+}
+
+
+.type-secondary small {
+
+    color:
+        var(--green-dark);
+
+}
+
+
+.font-display {
+
+    margin:
+        55px 0 10px;
+
+    font-family:
+        "Lilita One",
+        sans-serif;
+
+    font-size:
+        clamp(52px,6vw,90px);
+
+    line-height:
+        .85;
+
+    color:
+        var(--gold);
+
+}
+
+
+.font-display.secondary {
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size:
+        clamp(44px,5vw,70px);
+
+    font-weight:
+        600;
+
+    color:
+        var(--brown);
+
+}
+
+
+.type-primary h3,
+.type-secondary h3 {
+
+    margin:
+        0 0 10px;
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size:
+        25px;
+
+    font-weight:
+        600;
+
+}
+
+
+.type-primary p,
+.type-secondary p {
+
+    max-width:
+        560px;
+
+    margin:
+        0;
+
+    font-size:
+        16px;
+
+    line-height:
+        1.6;
+
+}
+
+
+.type-primary p {
+
+    color:
+        #FFF5E6;
+
+}
+
+
+.type-secondary p {
+
+    color:
+        var(--brown-soft);
+
+}
+
+
+/* Nota */
+
+.type-note {
+
+    margin-top:
+        20px;
+
+    display:
+        flex;
+
+    gap:
+        20px;
+
+    padding:
+        20px;
+
+    border-left:
+        5px solid var(--gold);
+
+    border-radius:
+        0 18px 18px 0;
+
+    background:
+        #F6F2D7;
+
+}
+
+
+.type-note strong {
+
+    font-size:
+        15px;
+
+    font-weight:
+        600;
+
+}
+
+
+.type-note span {
+
+    font-size:
+        14px;
+
+    line-height:
+        1.5;
+
+    font-weight:
+        500;
+
+    color:
+        var(--brown-soft);
+
+}
+
+
+/* ==========================================================
+   ANATOMÍA TIPOGRÁFICA
+========================================================== */
+
+.anatomy-section {
+
+    width:
+        100%;
+
+    margin:
+        35px 0 0;
+
+    padding:
+        45px 0 0;
+
+}
+
+
+.anatomy-header {
+
+    max-width:
+        850px;
+
+    margin-bottom:
+        30px;
+
+}
+
+
+.anatomy-header > span {
+
+    display:
+        inline-block;
+
+    margin-bottom:
+        12px;
+
+    font-size:
+        11px;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        .12em;
+
+    color:
+        var(--green-dark);
+
+}
+
+
+.anatomy-header h3 {
+
+    margin:
+        0;
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size:
+        clamp(38px,4vw,58px);
+
+    font-weight:
+        600;
+
+    line-height:
+        .95;
+
+    color:
+        var(--brown);
+
+}
+
+
+.anatomy-header h3 em {
+
+    color:
+        var(--gold);
+
+    font-style:
+        normal;
+
+}
+
+
+.anatomy-header p {
+
+    max-width:
+        720px;
+
+    margin:
+        16px 0 0;
+
+    font-size:
+        17px;
+
+    line-height:
+        1.7;
+
+    font-weight:
+        500;
+
+    color:
+        var(--brown-soft);
+
+}
+
+
+/* Contenedor */
+
+.anatomy-card {
+
+    width:
+        100%;
+
+    min-height:
+        520px;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        56% 44%;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        30px;
+
+    background:
+        var(--cream-white);
+
+    box-shadow:
+        var(--shadow);
+
+}
+
+
+/* Espacio para imagen */
+
+.anatomy-image-box {
+
+    min-height:
+        520px;
+
+    padding:
+        30px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #E7F1C8,
+            #FFF9E5
+        );
+
+    border-right:
+        1px solid rgba(114,46,1,.08);
+
+}
+
+
+.anatomy-placeholder {
+
+    width:
+        92%;
+
+    min-height:
+        430px;
+
+    padding:
+        35px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
+
+    border:
+        2px dashed rgba(114,46,1,.22);
+
+    border-radius:
+        25px;
+
+    background:
+        rgba(255,255,255,.62);
+
+}
+
+
+.anatomy-placeholder > span {
+
+    width:
+        65px;
+
+    height:
+        65px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    margin-bottom:
+        18px;
+
+    border-radius:
+        19px;
+
+    background:
+        var(--gold);
+
+    color:
+        var(--brown);
+
+    font-size:
+        30px;
+
+}
+
+
+.anatomy-placeholder strong {
+
+    max-width:
+        420px;
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size:
+        25px;
+
+    font-weight:
+        600;
+
+    line-height:
+        1.1;
+
+    color:
+        var(--brown);
+
+}
+
+
+.anatomy-placeholder small {
+
+    max-width:
+        430px;
+
+    margin-top:
+        12px;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.55;
+
+    font-weight:
+        500;
+
+    color:
+        var(--brown-soft);
+
+}
+
+
+/* Cuando coloques la imagen real */
+
+.anatomy-image-box img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    min-height:
+        520px;
+
+    object-fit:
+        contain;
+
+}
+
+
+/* ==========================================================
+   INFORMACIÓN DE ANATOMÍA
+========================================================== */
+
+.anatomy-info {
+
+    padding:
+        45px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+
+    gap:
+        7px;
+
+}
+
+
+.anatomy-item {
+
+    display:
+        flex;
+
+    align-items:
+        flex-start;
+
+    gap:
+        14px;
+
+    padding:
+        15px 0;
+
+    border-bottom:
+        1px solid rgba(114,46,1,.10);
+
+}
+
+
+.anatomy-item:last-child {
+
+    border-bottom:
+        none;
+
+}
+
+
+.anatomy-item > span {
+
+    width:
+        38px;
+
+    height:
+        38px;
+
+    flex-shrink:
+        0;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        12px;
+
+    background:
+        var(--green-light);
+
+    color:
+        var(--brown);
+
+    font-size:
+        14px;
+
+    font-weight:
+        700;
+
+}
+
+
+.anatomy-item strong {
+
+    display:
+        block;
+
+    margin-bottom:
+        4px;
+
+    font-size:
+        17px;
+
+    font-weight:
+        600;
+
+    color:
+        var(--brown);
+
+}
+
+
+.anatomy-item p {
+
+    margin:
+        0;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.55;
+
+    font-weight:
+        500;
+
+    color:
+        var(--brown-soft);
+
+}
+
+
+/* ==========================================================
+   04 — ELEMENTOS GRÁFICOS
+========================================================== */
+
+.graphic-section {
+
+    background:
+        #F4F5DE;
+
+}
+
+
+.graphic-intro {
+
+    max-width:
+        820px;
+
+    margin-bottom:
+        45px;
+
+}
+
+
+.graphic-intro > span {
+
+    display:
+        inline-block;
+
+    margin-bottom:
+        14px;
+
+    font-size:
+        12px;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        .12em;
+
+    color:
+        var(--green-dark);
+
+}
+
+
+.graphic-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:
+        18px;
+
+}
+
+
+.graphic-card {
+
+    min-height:
+        320px;
+
+    padding:
+        28px;
+
+    border-radius:
+        28px;
+
+    background:
+        #FFFFFF;
+
+    box-shadow:
+        var(--shadow-small);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+.graphic-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        var(--shadow);
+
+}
+
+
+.graphic-placeholder {
+
+    width:
+        90px;
+
+    height:
+        90px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        25px;
+
+    background:
+        var(--green-light);
+
+    color:
+        var(--brown);
+
+    font-size:
+        42px;
+
+}
+
+
+.graphic-card h3 {
+
+    margin:
+        25px 0 8px;
+
+    font-size:
+        28px;
+
+    font-weight:
+        600;
+
+    color:
+        var(--brown);
+
+}
+
+
+.graphic-card p {
+
+    font-size:
+        15px;
+
+    line-height:
+        1.6;
+
+}
+
+
+/* Espacio para imagen */
+
+.graphic-image-slot {
+
+    min-height:
+        330px;
+
+    margin-top:
+        20px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    text-align:
+        center;
+
+    border:
+        2px dashed rgba(114,46,1,.20);
+
+    border-radius:
+        30px;
+
+    background:
+        rgba(255,255,255,.60);
+
+}
+
+
+.graphic-image-slot span {
+
+    display:
+        block;
+
+    font-size:
+        20px;
+
+    font-weight:
+        600;
+
+}
+
+
+.graphic-image-slot p {
+
+    max-width:
+        500px;
+
+    margin:
+        10px auto 0;
+
+}
+
+
+/* ==========================================================
+   05 — UNIFORMES
+========================================================== */
+
+.application-section {
+
+    min-height:
+        700px;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        48% 52%;
+
+    align-items:
+        center;
+
+    padding:
+        0;
+
+    background:
+        var(--cream-soft);
+
+}
+
+
+.application-copy {
+
+    padding:
+        100px 6vw 100px 7vw;
+
+}
+
+
+.application-copy > span {
+
+    display:
+        inline-block;
+
+    margin-bottom:
+        14px;
+
+    font-size:
+        12px;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        .12em;
+
+    color:
+        var(--green-dark);
+
+}
+
+
+.application-copy h2 {
+
+    max-width:
+        680px;
+
+}
+
+
+.application-points {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        9px;
+
+    margin-top:
+        28px;
+
+}
+
+
+.application-points span {
+
+    padding:
+        10px 14px;
+
+    border-radius:
+        100px;
+
+    background:
+        var(--green-light);
+
+    font-size:
+        12px;
+
+    font-weight:
+        600;
+
+    color:
+        var(--brown);
+
+}
+
+
+/* Imagen */
+
+.application-image {
+
+    min-height:
+        700px;
+
+    padding:
+        35px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    background:
+        var(--brown);
+
+}
+
+
+.application-image .image-placeholder {
+
+    width:
+        100%;
+
+    min-height:
+        560px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    text-align:
+        center;
+
+    border:
+        2px dashed rgba(255,255,255,.45);
+
+    border-radius:
+        28px;
+
+    color:
+        white;
+
+}
+
+
+.application-image .image-placeholder span {
+
+    display:
+        block;
+
+    font-size:
+        25px;
+
+    font-weight:
+        600;
+
+}
+
+
+.application-image .image-placeholder small {
+
+    display:
+        block;
+
+    margin-top:
+        8px;
+
+    color:
+        var(--cream);
+
+}
+
+
+/* ==========================================================
+   06 — EMPAQUES
+========================================================== */
+
+.packaging-section {
+
+    background:
+        linear-gradient(
+            135deg,
+            #E7F1C8,
+            #FFFDF1
+        );
+
+}
+
+
+.packaging-heading {
+
+    max-width:
+        850px;
+
+    margin-bottom:
+        45px;
+
+}
+
+
+.packaging-heading > span {
+
+    display:
+        inline-block;
+
+    margin-bottom:
+        14px;
+
+    font-size:
+        12px;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        .12em;
+
+    color:
+        var(--green-dark);
+
+}
+
+
+.packaging-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.2fr .8fr;
+
+    gap:
+        18px;
+
+}
+
+
+.package-placeholder {
+
+    min-height:
+        270px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    text-align:
+        center;
+
+    border:
+        2px dashed rgba(114,46,1,.18);
+
+    border-radius:
+        25px;
+
+    background:
+        rgba(255,255,255,.65);
+
+}
+
+
+.package-placeholder.large {
+
+    min-height:
+        560px;
+
+    background:
+        rgba(255,255,255,.80);
+
+}
+
+
+.package-column {
+
+    display:
+        grid;
+
+    grid-template-rows:
+        1fr 1fr;
+
+    gap:
+        18px;
+
+}
+
+
+.package-placeholder span {
+
+    display:
+        block;
+
+    font-size:
+        20px;
+
+    font-weight:
+        600;
+
+    color:
+        var(--brown);
+
+}
+
+
+.package-placeholder small {
+
+    display:
+        block;
+
+    margin-top:
+        5px;
+
+    font-size:
+        11px;
+
+    font-weight:
+        600;
+
+    color:
+        var(--green-dark);
+
+}
+
+
+.packaging-note {
+
+    margin-top:
+        20px;
+
+    display:
+        inline-block;
+
+    padding:
+        12px 17px;
+
+    border-radius:
+        100px;
+
+    background:
+        var(--brown);
+
+    color:
+        #FFFFFF;
+
+    font-size:
+        13px;
+
+    font-weight:
+        600;
+
+}
+
+
+/* ==========================================================
+   07 — LETREROS
+========================================================== */
+
+.signage-section {
+
+    min-height:
+        680px;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        52% 48%;
+
+    align-items:
+        center;
+
+    padding:
+        0;
+
+    background:
+        var(--brown);
+
+    color:
+        #FFFFFF;
+
+}
+
+
+.signage-visual {
+
+    min-height:
+        680px;
+
+    padding:
+        50px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    background:
+        #8B4005;
+
+}
+
+
+.sign-placeholder {
+
+    width:
+        85%;
+
+    min-height:
+        330px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border:
+        2px dashed rgba(255,255,255,.35);
+
+    border-radius:
+        28px;
+
+}
+
+
+.sign-placeholder span {
+
+    font-family:
+        "Lilita One",
+        sans-serif;
+
+    font-size:
+        clamp(55px,6vw,95px);
+
+    color:
+        var(--gold);
+
+}
+
+
+.sign-placeholder small {
+
+    margin-top:
+        10px;
+
+    font-size:
+        11px;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        .12em;
+
+}
+
+
+.signage-copy {
+
+    padding:
+        100px 7vw 100px 5vw;
+
+}
+
+
+.signage-copy > span {
+
+    color:
+        var(--gold);
+
+}
+
+
+.signage-copy h2 {
+
+    color:
+        #FFFFFF;
+
+}
+
+
+.signage-copy p {
+
+    color:
+        #FFF6E5;
+
+}
+
+
+.signage-list {
+
+    margin-top:
+        30px;
+
+    display:
+        grid;
+
+    gap:
+        12px;
+
+}
+
+
+.signage-list div {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        13px;
+
+    padding:
+        13px;
+
+    border-radius:
+        16px;
+
+    background:
+        rgba(255,255,255,.08);
+
+    font-size:
+        14px;
+
+    font-weight:
+        500;
+
+}
+
+
+.signage-list strong {
+
+    font-size:
+        19px;
+
+    color:
+        var(--gold);
+
+}
+
+
+/* ==========================================================
+   08 — DECORACIÓN
+========================================================== */
+
+.decor-section {
+
+    background:
+        #EEF2D8;
+
+}
+
+
+.decor-heading {
+
+    max-width:
+        850px;
+
+    margin-bottom:
+        45px;
+
+}
+
+
+.decor-heading > span {
+
+    display:
+        inline-block;
+
+    margin-bottom:
+        14px;
+
+    font-size:
+        12px;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        .12em;
+
+    color:
+        var(--green-dark);
+
+}
+
+
+.decor-layout {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        55% 45%;
+
+    gap:
+        25px;
+
+    align-items:
+        stretch;
+
+}
+
+
+.decor-image {
+
+    min-height:
+        560px;
+
+}
+
+
+.decor-placeholder {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    min-height:
+        560px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    text-align:
+        center;
+
+    border-radius:
+        40px 0 40px 0;
+
+    border:
+        2px dashed rgba(114,46,1,.20);
+
+    background:
+        linear-gradient(
+            140deg,
+            #D8E7A8,
+            #FFFDF1
+        );
+
+}
+
+
+.decor-placeholder span {
+
+    display:
+        block;
+
+    font-size:
+        25px;
+
+    font-weight:
+        600;
+
+    color:
+        var(--brown);
+
+}
+
+
+.decor-placeholder small {
+
+    display:
+        block;
+
+    margin-top:
+        8px;
+
+    font-size:
+        11px;
+
+    font-weight:
+        600;
+
+    color:
+        var(--green-dark);
+
+}
+
+
+.decor-elements {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+
+    gap:
+        14px;
+
+}
+
+
+.decor-card {
+
+    padding:
+        22px;
+
+    background:
+        #FFFFFF;
+
+    border-radius:
+        21px;
+
+    box-shadow:
+        var(--shadow-small);
+
+}
+
+
+.decor-card strong {
+
+    display:
+        block;
+
+    margin-bottom:
+        7px;
+
+    font-size:
+        19px;
+
+    font-weight:
+        600;
+
+    color:
+        var(--brown);
+
+}
+
+
+.decor-card span {
+
+    font-size:
+        14px;
+
+    line-height:
+        1.5;
+
+    font-weight:
+        500;
+
+    color:
+        var(--brown-soft);
+
+}
+
+
+/* ==========================================================
+   CIERRE
+========================================================== */
+
+.visual-closing {
+
+    padding:
+        95px 7vw;
+
+    text-align:
+        center;
+
+    background:
+        var(--cream);
+
+}
+
+
+.visual-closing > span {
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        .18em;
+
+    color:
+        var(--green-dark);
+
+}
+
+
+.visual-closing h2 {
+
+    margin:
+        15px 0;
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size:
+        clamp(50px,6vw,82px);
+
+    font-weight:
+        600;
+
+    line-height:
+        .92;
+
+    color:
+        var(--brown);
+
+}
+
+
+.visual-closing h2 em {
+
+    color:
+        var(--gold);
+
+    font-style:
+        normal;
+
+}
+
+
+.visual-closing p {
+
+    max-width:
+        720px;
+
+    margin:
+        20px auto 0;
+
+    font-size:
+        18px;
+
+    line-height:
+        1.7;
+
+    font-weight:
+        500;
+
+    color:
+        var(--brown-soft);
+
+}
+
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.site-footer {
+
+    width:
+        100%;
+
+    padding:
+        50px 7vw;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        150px 1fr auto;
+
+    align-items:
+        center;
+
+    gap:
+        30px;
+
+    background:
+        var(--brown);
+
+    color:
+        #FFFFFF;
+
+}
+
+
+.footer-logo img {
+
+    width:
+        120px;
+
+}
+
+
+.footer-info h3 {
+
+    margin:
+        0 0 6px;
+
+    font-family:
+        "Lilita One",
+        sans-serif;
+
+    font-size:
+        30px;
+
+    font-weight:
+        400;
+
+    color:
+        var(--gold);
+
+}
+
+
+.footer-info p {
+
+    margin:
+        0 0 5px;
+
+    font-size:
+        15px;
+
+    font-weight:
+        500;
+
+}
+
+
+.footer-info span {
+
+    font-size:
+        13px;
+
+    font-weight:
+        500;
+
+    opacity:
+        .80;
+
+}
+
+
+.footer-quote {
+
+    max-width:
+        280px;
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size:
+        23px;
+
+    font-weight:
+        600;
+
+    line-height:
+        1.05;
+
+    color:
+        #D8E7A8;
+
+}
+
+
+/* ==========================================================
+   BOTÓN VOLVER ARRIBA
+========================================================== */
+
+.back-top {
+
+    position:
+        fixed;
+
+    right:
+        22px;
+
+    bottom:
+        22px;
+
+    width:
+        50px;
+
+    height:
+        50px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border:
+        none;
+
+    border-radius:
+        16px;
+
+    background:
+        var(--gold);
+
+    color:
+        var(--brown);
+
+    font-size:
+        21px;
+
+    font-weight:
+        700;
+
+    cursor:
+        pointer;
+
+    opacity:
+        0;
+
+    visibility:
+        hidden;
+
+    transform:
+        translateY(15px);
+
+    transition:
+        .3s ease;
+
+    z-index:
+        8000;
+
+}
+
+
+.back-top.show {
+
+    opacity:
+        1;
+
+    visibility:
+        visible;
+
+    transform:
+        translateY(0);
+
+}
+
+
+.back-top:hover {
+
+    transform:
+        translateY(-4px);
+
+}
+
+
+/* ==========================================================
+   ANIMACIONES
+========================================================== */
+
+@keyframes visualFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-12px);
+
+    }
+
+}
+
+
+/* ==========================================================
+   REVEAL
+========================================================== */
+
+.reveal-item {
+
+    opacity:
+        0;
+
+    transform:
+        translateY(28px);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+
+}
+
+
+.reveal-item.visible {
+
+    opacity:
+        1;
+
+    transform:
+        translateY(0);
+
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 1100px) {
+
+
+    /* NAV */
+
+    .navbar {
+
+        overflow-x:
+            auto;
+
+        justify-content:
+            flex-start;
+
+    }
+
+
+    .nav-item {
+
+        flex:
+            0 0 auto;
+
+    }
+
+
+    /* HERO */
+
+    .visual-hero {
+
+        grid-template-columns:
+            1fr;
+
+        text-align:
+            center;
+
+    }
+
+
+    .visual-hero-content {
+
+        margin:
+            0 auto;
+
+    }
+
+
+    .hero-keywords {
+
+        justify-content:
+            center;
+
+    }
+
+
+    .visual-hero-logo {
+
+        min-height:
+            440px;
+
+    }
+
+
+    /* LOGO */
+
+    .logo-content-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    /* COLORES */
+
+    .color-system {
+
+        grid-template-columns:
+            repeat(3,1fr);
+
+    }
+
+
+    /* TIPOGRAFÍA */
+
+    .type-showcase {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    /* ANATOMÍA */
+
+    .anatomy-card {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .anatomy-image-box {
+
+        border-right:
+            none;
+
+        border-bottom:
+            1px solid rgba(114,46,1,.08);
+
+    }
+
+
+    /* GRÁFICOS */
+
+    .graphic-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+
+    /* UNIFORMES */
+
+    .application-section {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .application-copy {
+
+        padding:
+            80px 7vw;
+
+    }
+
+
+    .application-image {
+
+        min-height:
+            500px;
+
+    }
+
+
+    /* EMPAQUES */
+
+    .packaging-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    /* LETREROS */
+
+    .signage-section {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .signage-visual {
+
+        min-height:
+            500px;
+
+    }
+
+
+    .signage-copy {
+
+        padding:
+            80px 7vw;
+
+    }
+
+
+    /* DECORACIÓN */
+
+    .decor-layout {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    /* FOOTER */
+
+    .site-footer {
+
+        grid-template-columns:
+            1fr;
+
+        text-align:
+            center;
+
+        justify-items:
+            center;
+
+    }
+
+}
+
+
+/* ==========================================================
+   MÓVIL
+========================================================== */
+
+@media (max-width: 700px) {
+
+
+    /* HEADER */
+
+    .site-header {
+
+        height:
+            90px;
+
+    }
+
+
+    .brand-logo-wrap {
+
+        left:
+            18px;
+
+        width:
+            90px;
+
+        height:
+            65px;
+
+    }
+
+
+    .brand-logo {
+
+        width:
+            90px;
+
+    }
+
+
+    .brand-copy h1 {
+
+        font-size:
+            17px;
+
+        max-width:
+            230px;
+
+    }
+
+
+    /* NAV */
+
+    .navbar {
+
+        width:
+            100%;
+
+        margin:
+            0;
+
+        padding:
+            5px;
+
+        border-radius:
+            0;
+
+    }
+
+
+    .nav-link {
+
+        min-height:
+            47px;
+
+        font-size:
+            12px;
+
+        padding:
+            8px;
+
+    }
+
+
+    .dropdown-menu {
+
+        width:
+            220px;
+
+        min-width:
+            220px;
+
+        left:
+            0;
+
+        transform:
+            translateY(-8px);
+
+    }
+
+
+    .dropdown-item:hover .dropdown-menu {
+
+        transform:
+            translateY(0);
+
+    }
+
+
+    /* HERO */
+
+    .visual-hero {
+
+        min-height:
+            auto;
+
+        padding:
+            65px 6vw 75px;
+
+    }
+
+
+    .visual-hero h2 {
+
+        font-size:
+            52px;
+
+    }
+
+
+    .visual-hero p {
+
+        font-size:
+            16px;
+
+    }
+
+
+    .visual-hero-logo {
+
+        min-height:
+            390px;
+
+    }
+
+
+    .logo-display {
+
+        width:
+            300px;
+
+    }
+
+
+    /* SECCIONES */
+
+    .visual-section {
+
+        padding:
+            75px 6vw;
+
+    }
+
+
+    .visual-section h2 {
+
+        font-size:
+            48px;
+
+    }
+
+
+    .visual-section p {
+
+        font-size:
+            16px;
+
+    }
+
+
+    /* LOGO */
+
+    .logo-image-area {
+
+        min-height:
+            400px;
+
+    }
+
+
+    .logo-elements {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    /* COLORES */
+
+    .color-system {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+
+    .color-card {
+
+        min-height:
+            360px;
+
+    }
+
+
+    .color-swatch {
+
+        height:
+            150px;
+
+    }
+
+
+    .color-detail {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+    }
+
+
+    .detail-values {
+
+        flex-direction:
+            column;
+
+        gap:
+            8px;
+
+    }
+
+
+    /* TIPOGRAFÍA */
+
+    .type-note {
+
+        flex-direction:
+            column;
+
+        gap:
+            8px;
+
+    }
+
+
+    /* ANATOMÍA */
+
+    .anatomy-header h3 {
+
+        font-size:
+            42px;
+
+    }
+
+
+    .anatomy-image-box {
+
+        min-height:
+            380px;
+
+        padding:
+            20px;
+
+    }
+
+
+    .anatomy-placeholder {
+
+        min-height:
+            320px;
+
+        padding:
+            25px;
+
+    }
+
+
+    .anatomy-info {
+
+        padding:
+            30px 22px;
+
+    }
+
+
+    /* GRÁFICOS */
+
+    .graphic-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    /* UNIFORMES */
+
+    .application-image {
+
+        min-height:
+            430px;
+
+        padding:
+            20px;
+
+    }
+
+
+    .application-image .image-placeholder {
+
+        min-height:
+            390px;
+
+    }
+
+
+    /* LETREROS */
+
+    .signage-visual {
+
+        min-height:
+            430px;
+
+        padding:
+            25px;
+
+    }
+
+
+    .sign-placeholder {
+
+        width:
+            100%;
+
+    }
+
+
+    /* DECORACIÓN */
+
+    .decor-image,
+    .decor-placeholder {
+
+        min-height:
+            400px;
+
+    }
+
+
+    /* EMPAQUES */
+
+    .package-placeholder.large {
+
+        min-height:
+            380px;
+
+    }
+
+
+    .package-column {
+
+        grid-template-rows:
+            auto;
+
+    }
+
+}
+
+
+/* ==========================================================
+   MÓVIL PEQUEÑO
+========================================================== */
+
+@media (max-width: 500px) {
+
+
+    .visual-hero h2 {
+
+        font-size:
+            47px;
+
+    }
+
+
+    .hero-keywords span {
+
+        font-size:
+            11px;
+
+        padding:
+            8px 11px;
+
+    }
+
+
+    .color-system {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .type-note {
+
+        padding:
+            16px;
+
+    }
+
+
+    .anatomy-placeholder strong {
+
+        font-size:
+            21px;
+
+    }
+
+
+    .anatomy-placeholder small {
+
+        font-size:
+            13px;
+
+    }
+
+
+    .visual-closing h2 {
+
+        font-size:
+            45px;
+
+    }
+
+}
+/* ==========================================================
+   SAMILU — BOCETOS Y PROCESO DE CREACIÓN
+   Efectos, tarjetas, animaciones y presentación visual
+========================================================== */
+
+.sketches-section {
+    position: relative;
+    width: 100%;
+    padding: 110px 5vw 120px;
+    background:
+        radial-gradient(circle at 8% 12%, rgba(250,185,2,.13), transparent 22%),
+        radial-gradient(circle at 92% 88%, rgba(112,177,35,.12), transparent 24%),
+        #FDF6D3;
+    overflow: hidden;
+}
+
+/* Decoraciones de fondo */
+
+.sketches-section::before,
+.sketches-section::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(2px);
+}
+
+.sketches-section::before {
+    width: 260px;
+    height: 260px;
+    top: 40px;
+    right: -100px;
+    background: rgba(250,185,2,.12);
+}
+
+.sketches-section::after {
+    width: 220px;
+    height: 220px;
+    bottom: 60px;
+    left: -100px;
+    background: rgba(25,104,30,.10);
+}
+
+
+/* ==========================================================
+   ENCABEZADO
+========================================================== */
+
+.sketches-heading {
+    position: relative;
+    z-index: 2;
+    max-width: 1250px;
+    margin: 0 auto 65px;
+}
+
+.sketches-heading > span {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-family: "Fredoka", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: #722E01;
+}
+
+.sketches-heading h2 {
+    margin: 0;
+    font-family: "Fredoka", sans-serif;
+    font-size: clamp(42px, 5vw, 72px);
+    font-weight: 600;
+    line-height: .98;
+    color: #722E01;
+    max-width: 1100px;
+}
+
+.sketches-heading h2::after {
+    content: "";
+    display: block;
+    width: 110px;
+    height: 7px;
+    margin-top: 22px;
+    border-radius: 20px;
+    background: #FAB902;
+}
+
+.sketches-intro {
+    max-width: 1100px;
+    margin: 25px 0 0;
+    font-family: "Fredoka", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.7;
+    color: #722E01;
+}
+
+
+/* ==========================================================
+   CONTENEDOR DE PROPUESTAS
+========================================================== */
+
+.sketches-grid {
+    position: relative;
+    z-index: 2;
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+/* ==========================================================
+   TARJETA
+========================================================== */
+
+.sketch-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(320px, 43%) 1fr;
+    min-height: 330px;
+    overflow: hidden;
+
+    background: rgba(255,255,255,.48);
+    border: 1px solid rgba(114,46,1,.15);
+    border-radius: 28px;
+
+    box-shadow:
+        0 15px 40px rgba(114,46,1,.08);
+
+    backdrop-filter: blur(8px);
+
+    opacity: 0;
+    transform: translateY(45px);
+
+    transition:
+        transform .45s ease,
+        box-shadow .45s ease,
+        border-color .45s ease;
+}
+
+
+/* Classe ajoutada por JS */
+
+.sketch-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Hover */
+
+.sketch-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(250,185,2,.55);
+
+    box-shadow:
+        0 25px 55px rgba(114,46,1,.14);
+}
+
+
+/* ==========================================================
+   ZONA DE IMAGEN
+========================================================== */
+
+.sketch-image-box {
+    position: relative;
+    min-height: 330px;
+    padding: 18px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(25,104,30,.96),
+            rgba(112,177,35,.82)
+        );
+    overflow: hidden;
+}
+
+.sketch-image-box::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    right: -50px;
+    top: -50px;
+    background: rgba(250,185,2,.30);
+    transition: transform .6s ease;
+}
+
+.sketch-card:hover .sketch-image-box::before {
+    transform: scale(1.35) rotate(20deg);
+}
+
+.sketch-image-box::after {
+    content: "";
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    left: -50px;
+    bottom: -55px;
+    background: rgba(253,246,211,.17);
+}
+
+
+/* ==========================================================
+   PLACEHOLDER DE IMAGEN
+========================================================== */
+
+.sketch-placeholder {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    height: 100%;
+    min-height: 292px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    padding: 35px;
+
+    border: 2px dashed rgba(253,246,211,.72);
+    border-radius: 22px;
+
+    background: rgba(253,246,211,.10);
+
+    transition:
+        background .35s ease,
+        border-color .35s ease,
+        transform .35s ease;
+}
+
+.sketch-card:hover .sketch-placeholder {
+    background: rgba(253,246,211,.17);
+    border-color: #FAB902;
+    transform: scale(.98);
+}
+
+.sketch-placeholder span {
+    font-family: "Fredoka", sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+    color: #FDF6D3;
+    letter-spacing: .5px;
+}
+
+.sketch-placeholder small {
+    margin-top: 10px;
+    font-family: "Fredoka", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(253,246,211,.85);
+}
+
+
+/* ==========================================================
+   CONTENIDO
+========================================================== */
+
+.sketch-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 48px 55px;
+}
+
+.sketch-number {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+
+    font-family: "Lilita One", sans-serif;
+    font-size: 65px;
+    line-height: 1;
+
+    color: rgba(250,185,2,.18);
+}
+
+.sketch-label {
+    display: inline-flex;
+    width: fit-content;
+
+    margin-bottom: 13px;
+    padding: 7px 13px;
+
+    border-radius: 30px;
+
+    background: rgba(250,185,2,.14);
+
+    font-family: "Fredoka", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #722E01;
+}
+
+.sketch-content h3 {
+    margin: 0 0 17px;
+
+    font-family: "Fredoka", sans-serif;
+    font-size: clamp(25px, 2.4vw, 34px);
+    font-weight: 600;
+    line-height: 1.1;
+
+    color: #722E01;
+}
+
+.sketch-content p {
+    margin: 0;
+    max-width: 700px;
+
+    font-family: "Fredoka", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.7;
+
+    color: #5d321c;
+}
+
+
+/* ==========================================================
+   PROPUESTA SELECCIONADA
+========================================================== */
+
+.sketch-card.selected {
+    border: 2px solid #FAB902;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(250,185,2,.12),
+            rgba(112,177,35,.09)
+        );
+
+    box-shadow:
+        0 20px 55px rgba(250,185,2,.19);
+}
+
+.sketch-card.selected:hover {
+    box-shadow:
+        0 28px 65px rgba(250,185,2,.28);
+}
+
+
+/* Badge */
+
+.selected-badge {
+    position: absolute;
+    z-index: 5;
+
+    top: 18px;
+    left: 18px;
+
+    padding: 9px 16px;
+
+    border-radius: 30px;
+
+    background: #FAB902;
+    color: #722E01;
+
+    font-family: "Fredoka", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .8px;
+
+    box-shadow:
+        0 7px 20px rgba(250,185,2,.32);
+
+    animation: badgePulse 2.5s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+    0%,100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.04);
+    }
+}
+
+
+/* ==========================================================
+   RESUMEN DEL PROCESO
+========================================================== */
+
+.selection-summary {
+    position: relative;
+    z-index: 2;
+
+    max-width: 900px;
+
+    margin: 70px auto 0;
+
+    padding: 34px 40px;
+
+    text-align: center;
+
+    background: #722E01;
+    border-radius: 25px;
+
+    box-shadow:
+        0 20px 45px rgba(114,46,1,.18);
+}
+
+.selection-summary span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-family: "Fredoka", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+    color: #FAB902;
+}
+
+.selection-summary strong {
+    display: block;
+
+    font-family: "Lilita One", sans-serif;
+    font-size: clamp(23px, 3vw, 38px);
+    font-weight: 400;
+
+    color: #FDF6D3;
+}
+
+.selection-summary p {
+    margin: 12px 0 0;
+
+    font-family: "Fredoka", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+
+    color: rgba(253,246,211,.85);
+}
+
+
+/* ==========================================================
+   ANIMACIÓN DEL TÍTULO
+========================================================== */
+
+.sketches-heading > * {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: headingReveal .8s ease forwards;
+}
+
+.sketches-heading > span {
+    animation-delay: .1s;
+}
+
+.sketches-heading h2 {
+    animation-delay: .25s;
+}
+
+.sketches-heading .sketches-intro {
+    animation-delay: .4s;
+}
+
+@keyframes headingReveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 900px) {
+
+    .sketches-section {
+        padding: 85px 5vw;
+    }
+
+    .sketch-card {
+        grid-template-columns: 1fr;
+    }
+
+    .sketch-image-box {
+        min-height: 300px;
+    }
+
+    .sketch-placeholder {
+        min-height: 260px;
+    }
+
+    .sketch-content {
+        padding: 40px 30px 45px;
+    }
+
+    .sketch-number {
+        font-size: 55px;
+        right: 25px;
+    }
+}
+
+
+@media (max-width: 560px) {
+
+    .sketches-section {
+        padding: 65px 18px;
+    }
+
+    .sketches-heading h2 {
+        font-size: 38px;
+    }
+
+    .sketches-intro {
+        font-size: 16px;
+    }
+
+    .sketch-content {
+        padding: 35px 23px 40px;
+    }
+
+    .sketch-content h3 {
+        font-size: 26px;
+    }
+
+    .sketch-content p {
+        font-size: 16px;
+    }
+
+    .selection-summary {
+        padding: 28px 22px;
+    }
+}
+/* Efecto del resumen */
+
+.selection-summary {
+    opacity: 0;
+    transform: translateY(35px) scale(.97);
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+.selection-summary.summary-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+/* ==========================================================
+   VISTA AMPLIADA DE IMÁGENES — LIGHTBOX
+========================================================== */
+
+/* La imagen dentro de la tarjeta */
+.sketch-image-box img {
+    width: 100%;
+    height: 100%;
+    min-height: 292px;
+    display: block;
+    object-fit: cover;
+    border-radius: 22px;
+    cursor: zoom-in;
+
+    transition:
+        transform .45s ease,
+        filter .35s ease;
+}
+
+
+/* Pequeño efecto antes de abrir */
+.sketch-image-box:hover img {
+    transform: scale(1.04);
+    filter: brightness(1.04);
+}
+
+
+/* ==========================================================
+   CAPA DE VISTA AMPLIADA
+========================================================== */
+
+.image-lightbox {
+    position: fixed;
+    inset: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+
+    background: rgba(74, 27, 1, .88);
+
+    backdrop-filter: blur(12px);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    z-index: 99999;
+
+    transition:
+        opacity .35s ease,
+        visibility .35s ease;
+}
+
+
+/* Cuando está abierta */
+
+.image-lightbox.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+
+/* ==========================================================
+   IMAGEN GRANDE
+========================================================== */
+
+.image-lightbox img {
+    width: auto;
+    height: auto;
+
+    max-width: 92vw;
+    max-height: 88vh;
+
+    object-fit: contain;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 30px 90px rgba(0,0,0,.45);
+
+    transform: scale(.72);
+
+    transition:
+        transform .45s cubic-bezier(.22,1,.36,1);
+}
+
+
+/* Animación de entrada */
+
+.image-lightbox.active img {
+    transform: scale(1);
+}
+
+
+/* ==========================================================
+   BOTÓN CERRAR
+========================================================== */
+
+.lightbox-close {
+    position: absolute;
+
+    top: 24px;
+    right: 28px;
+
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #FAB902;
+    color: #722E01;
+
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.25);
+
+    transition:
+        transform .25s ease,
+        background .25s ease;
+}
+
+.lightbox-close:hover {
+    transform: scale(1.12) rotate(5deg);
+    background: #FDF6D3;
+}
+
+
+/* ==========================================================
+   NOMBRE DE LA PROPUESTA
+========================================================== */
+
+.lightbox-title {
+    position: absolute;
+
+    left: 50%;
+    bottom: 24px;
+
+    transform: translateX(-50%);
+
+    padding: 10px 20px;
+
+    border-radius: 30px;
+
+    background: rgba(253,246,211,.95);
+
+    color: #722E01;
+
+    font-family: "Fredoka", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.18);
+}
+
+
+/* ==========================================================
+   CURSOR
+========================================================== */
+
+.image-lightbox img {
+    cursor: zoom-out;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 700px) {
+
+    .image-lightbox {
+        padding: 20px;
+    }
+
+    .image-lightbox img {
+        max-width: 96vw;
+        max-height: 82vh;
+        border-radius: 12px;
+    }
+
+    .lightbox-close {
+        top: 15px;
+        right: 15px;
+
+        width: 46px;
+        height: 46px;
+
+        font-size: 25px;
+    }
+
+    .lightbox-title {
+        bottom: 15px;
+        font-size: 13px;
+        max-width: 90%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+/* ==========================================
+   CARRUSEL ANATOMÍA TIPOGRÁFICA — SAMILU
+   Mantiene el panel izquierdo y el derecho
+========================================== */
+
+.anatomy-image-box {
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* Marco interior discontinuo */
+
+.anatomy-carousel {
+    width: 92%;
+    height: 430px;
+    min-width: 0;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
+
+    position: relative;
+    overflow: hidden;
+
+    border: 2px dashed rgba(74, 27, 1, 0.22);
+    border-radius: 25px;
+
+    background: rgba(255, 255, 255, 0.58);
+}
+
+/* Área de la imagen */
+
+.anatomy-slide {
+    position: relative;
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+/* Mostrar imagen completa sin deformarla */
+
+.anatomy-image-box .anatomy-slide > img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    max-width: 100%;
+    max-height: 100%;
+
+    object-fit: contain;
+    object-position: center;
+
+    padding: 12px;
+    box-sizing: border-box;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.3s ease;
+}
+
+.anatomy-slide.has-image > img {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Mensaje cuando todavía no se ha cargado la imagen */
+
+.anatomy-carousel-placeholder {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+
+    width: 100%;
+    min-height: 0;
+    height: auto;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: 25px;
+    text-align: center;
+
+    border: none;
+    border-radius: 0;
+    background: transparent;
+}
+
+.anatomy-slide.has-image .anatomy-carousel-placeholder {
+    display: none;
+}
+
+.anatomy-carousel-placeholder > span {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    margin-bottom: 18px;
+    border-radius: 18px;
+
+    background: var(--honey);
+    color: var(--brown);
+    font-size: 30px;
+}
+
+.anatomy-carousel-placeholder > strong {
+    max-width: 420px;
+    font-family: "Fredoka", sans-serif;
+    font-size: 23px;
+    line-height: 1.2;
+    color: var(--brown);
+}
+
+.anatomy-carousel-placeholder > small {
+    max-width: 400px;
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--olive);
+    overflow-wrap: anywhere;
+}
+
+/* Flechas de navegación */
+
+.anatomy-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 4;
+    transform: translateY(-50%);
+
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+    place-items: center;
+
+    padding: 0;
+    border: 1px solid rgba(74, 27, 1, 0.12);
+    border-radius: 50%;
+
+    background: #FFFDF8;
+    color: var(--brown);
+
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(74, 27, 1, 0.12);
+
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.anatomy-prev {
+    left: 12px;
+}
+
+.anatomy-next {
+    right: 12px;
+}
+
+.anatomy-arrow:hover {
+    background: var(--honey);
+    color: var(--brown);
+}
+
+/* Controles debajo de la imagen */
+
+.anatomy-controls {
+    min-height: 42px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    padding: 8px 14px;
+}
+
+.anatomy-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.anatomy-dot {
+    width: 9px;
+    height: 9px;
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #D8D2BE;
+    cursor: pointer;
+
+    transition: width 0.2s ease, background 0.2s ease;
+}
+
+.anatomy-dot.active {
+    width: 23px;
+    border-radius: 8px;
+    background: var(--honey);
+}
+
+.anatomy-counter {
+    flex-shrink: 0;
+    font-family: "Fredoka", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--brown);
+}
+
+.anatomy-arrow:focus-visible,
+.anatomy-dot:focus-visible {
+    outline: 2px solid var(--honey);
+    outline-offset: 3px;
+}
+
+/* Adaptación móvil: una columna solo en pantallas pequeñas */
+
+@media (max-width: 1000px) {
+    .anatomy-carousel {
+        width: 100%;
+        height: 400px;
+    }
+}
+
+@media (max-width: 560px) {
+    .anatomy-carousel {
+        height: 320px;
+        border-radius: 20px;
+    }
+
+    .anatomy-arrow {
+        width: 36px;
+        height: 36px;
+    }
+
+    .anatomy-carousel-placeholder > strong {
+        font-size: 19px;
+    }
+}
+
+/* ==========================================
+   AMPLIACIÓN DE IMÁGENES — SAMILU
+========================================== */
+
+/* Indicar que la imagen se puede ampliar */
+.anatomy-slide > img {
+    cursor: zoom-in;
+}
+
+/* Fondo oscuro que cubre la pantalla */
+.anatomy-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 65px;
+    box-sizing: border-box;
+
+    background: rgba(35, 22, 12, 0.94);
+    backdrop-filter: blur(8px);
+}
+
+/* Ocultar el visor cuando está cerrado */
+.anatomy-lightbox[hidden] {
+    display: none !important;
+}
+
+/* La imagen ampliada conserva sus proporciones */
+.anatomy-lightbox-image {
+    display: block;
+
+    max-width: 92vw;
+    max-height: 86vh;
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+    object-position: center;
+
+    border-radius: 10px;
+    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* Botones del visor */
+.anatomy-lightbox button {
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+    padding: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+
+    background: rgba(255, 253, 246, 0.96);
+    color: #4A1B01;
+
+    font-size: 25px;
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.anatomy-lightbox button:hover {
+    background: #E8A51A;
+    transform: scale(1.06);
+}
+
+/* Cerrar */
+.anatomy-lightbox-close {
+    top: 22px;
+    right: 25px;
+}
+
+/* Anterior y siguiente */
+.anatomy-lightbox-prev {
+    left: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.anatomy-lightbox-next {
+    right: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.anatomy-lightbox .anatomy-lightbox-prev:hover,
+.anatomy-lightbox .anatomy-lightbox-next:hover {
+    transform: translateY(-50%) scale(1.06);
+}
+
+/* Contador de imágenes */
+.anatomy-lightbox-counter {
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: #FFFDF6;
+    font-family: "Fredoka", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* Evitar el desplazamiento de la página de fondo */
+body.anatomy-lightbox-open {
+    overflow: hidden;
+}
+
+/* Adaptación a móviles */
+@media (max-width: 600px) {
+    .anatomy-lightbox {
+        padding: 55px 12px;
+    }
+
+    .anatomy-lightbox-image {
+        max-width: 96vw;
+        max-height: 82vh;
+    }
+
+    .anatomy-lightbox button {
+        width: 40px;
+        height: 40px;
+        font-size: 21px;
+    }
+
+    .anatomy-lightbox-close {
+        top: 12px;
+        right: 12px;
+    }
+
+    .anatomy-lightbox-prev {
+        left: 8px;
+    }
+
+    .anatomy-lightbox-next {
+        right: 8px;
+    }
+}
+
+/* ==========================================
+   ELEMENTOS GRÁFICOS — IMAGEN SAMILU
+========================================== */
+
+.graphic-image-slot {
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    border: 1px solid rgba(74, 27, 1, 0.12);
+    border-radius: 24px;
+
+    background: #F0F2D8;
+}
+
+.graphic-main-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 650px;
+
+    object-fit: contain;
+    object-position: center;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 700px) {
+    .graphic-image-slot {
+        padding: 12px;
+        border-radius: 18px;
+    }
+
+    .graphic-main-image {
+        max-height: 450px;
+    }
+}
